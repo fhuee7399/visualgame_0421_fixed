@@ -24,3 +24,8 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

@@ -79,10 +79,26 @@ menu:
 if affection >= 2:
         "회상 1 해금!"
 
-jump week2
+        jump week1feedback
+
 
 if affection < 2:
-    jump week2
+
+    jump week1feedback
+
+label week1feedback:
+if affection <= 1:
+    e "낮은 피드백"
+
+
+elif 1 < affection < 4:
+    e "중간 피드백"
+
+
+else:
+    e "높은 피드백"
+
+jump week2
 
 label week2:
     $ affection = 0

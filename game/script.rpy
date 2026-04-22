@@ -64,6 +64,18 @@ menu:
         $ affection += 0
         e "흠"
 
+menu:
+    "1.응 귀여워":
+        $ affection += 2
+        e "우와 기뻐"
+
+    "2.그럭저럭":
+        $ affection += 1
+        e "너무해"
+
+    "3.아니 전혀":
+        $ affection += 0
+        e "흠"
     
 if affection >= 2:
         "회상 해금!"
@@ -89,6 +101,18 @@ menu:
         $ affection += 0
         e "흠"
 
+menu:
+    "1.응":
+        $ affection += 2
+        e "우와 기뻐"
+
+    "2.뭐 그냥 그래":
+        $ affection += 1
+        e "너무해"
+
+    "3.놉":
+        $ affection += 0
+        e "흠"
     
 if affection < 3:
         jump bad_ending
@@ -102,6 +126,68 @@ if affection >= 7:
 
 jump week3
 
+label week3:
 
+    "3주차 시작"
 
+    e "안녕"
 
+menu:
+    "1.응 반가워":
+        $ affection += 2
+        e "우와 기뻐"
+
+    "2.응":
+        $ affection += 1
+        e "너무해"
+
+    "3.안 반가움":
+        $ affection += 0
+        e "흠"
+
+menu:
+    "1.응 반가워":
+        $ affection += 2
+        e "우와 기뻐"
+
+    "2.응":
+        $ affection += 1
+        e "너무해"
+
+    "3.안 반가움":
+        $ affection += 0
+        e "흠"
+    
+if affection >= 9:
+        $ final_piece = True
+
+jump final_branch
+
+label final_branch:
+
+    if affection < 5:
+        jump bad_ending
+
+    if not saw_date_event:
+        jump normal_ending
+
+    if final_piece:
+        jump true_ending
+
+    jump good_ending
+
+label bad_ending:
+    "배드 엔딩"
+    return
+
+label normal_ending:
+    "노멀 엔딩"
+    return
+
+label good_ending:
+    "굿 엔딩"
+    return
+
+label true_ending:
+    "트루 엔딩"
+    return

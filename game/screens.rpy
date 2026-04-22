@@ -338,7 +338,13 @@ style navigation_button:
     properties gui.button_properties("navigation_button")
 
 style navigation_button_text:
-    properties gui.text_properties("navigation_button")
+    font "Cafe24Shiningstar.otf"
+    size 60
+    color "#E4FFFA"
+    outlines [(3, "#868070", 0, 0)]
+
+style navigation_button_text_hover:
+    color "#FFA28D"
 
 
 ## Main Menu 스크린 ###############################################################
@@ -1605,3 +1611,35 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+# =========================
+# 커스텀 스타일
+# =========================
+
+style say_dialogue:
+    font "Pretendard-Regular.otf"
+    size 40
+    color "#000000"
+
+style say_label:
+    font "Pretendard-Medium.otf"
+    size 40
+    color "#FFFFFF"
+    outlines [(3, "#82BABB", 0, 0)]
+
+style choice_button_text:
+    font "Pretendard-SemiBold.otf"
+    size 40
+    color "#84796A"
+
+style choice_button_text_hover:
+    color "#643800"
+
+style main_menu_button_text:
+    font "Cafe24Shiningstar.otf"
+    size 60
+    color "#E4FFFA"
+    outlines [(3, "#868070", 0, 0)]
+
+style main_menu_button_text_hover:
+    color "#FFA28D"

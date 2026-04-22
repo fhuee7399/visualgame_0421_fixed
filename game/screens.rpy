@@ -265,7 +265,7 @@ style quick_button is default
 style quick_button_text is button_text
 
 style quick_menu:
-    xalign 0.5
+    xalign 0.98
     yalign 1.0
 
 style quick_button:

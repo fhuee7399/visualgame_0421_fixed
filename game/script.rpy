@@ -3,7 +3,6 @@
 default week = 1
 default affection = 0
 default saw_date_event = False
-default final_piece = False
 
 # image 문을 사용해 이미지를 정의합니다.
 # image eileen happy = "eileen_happy.png"
@@ -15,10 +14,8 @@ define e = Character('아이린', color="#c8ffc8")
 # 여기에서부터 게임이 시작합니다.
 label start:
 
-    e "새로운 렌파이 게임을 만들었군요."
-
-    e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
-
+    e "프롤로그입니다."
+   
     e "너 나 좋아해?"
 
 menu:
@@ -46,10 +43,11 @@ menu:
 jump week1
 
 label week1:
+    $ affection = 0
 
     "1주차 시작"
 
-    e "나는 귀여워?"
+e "나는 귀여워?"
 
 menu:
     "1.응 귀여워":
@@ -63,6 +61,8 @@ menu:
     "3.아니 전혀":
         $ affection += 0
         e "흠"
+
+e "귀여워어어?"
 
 menu:
     "1.응 귀여워":
@@ -78,11 +78,15 @@ menu:
         e "흠"
     
 if affection >= 2:
-        "회상 해금!"
+        "회상 1 해금!"
 
 jump week2
 
+if affection < 2:
+    jump week2
+
 label week2:
+    $ affection = 0
 
     "2주차 시작"
 
@@ -101,6 +105,8 @@ menu:
         $ affection += 0
         e "흠"
 
+e "너를 좋아하는 것 같아."
+
 menu:
     "1.응":
         $ affection += 2
@@ -118,7 +124,7 @@ if affection < 3:
         jump bad_ending
 
 if affection >= 5:
-        "회상2 해금"
+        "회상 2 해금"
 
 if affection >= 7:
         $ saw_date_event = True
@@ -127,6 +133,7 @@ if affection >= 7:
 jump week3
 
 label week3:
+    $ affection = 0
 
     "3주차 시작"
 
@@ -159,9 +166,12 @@ menu:
         e "흠"
     
 if affection >= 9:
-        $ final_piece = True
+    "회상 3 해금"
 
 jump final_branch
+
+if affection < 9:
+    jump final_branch
 
 label final_branch:
 

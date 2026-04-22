@@ -1,5 +1,10 @@
 ﻿# 이 파일에 게임 스크립트를 입력합니다.
 
+default week = 1
+default affection = 0
+default saw_date_event = False
+default final_piece = False
+
 # image 문을 사용해 이미지를 정의합니다.
 # image eileen happy = "eileen_happy.png"
 
@@ -17,31 +22,86 @@ label start:
     e "너 나 좋아해?"
 
 menu:
-    "1. 응 좋아해":
+    "1.응 좋아해":
         e "우와 기뻐"
 
-    "2. 그럭저럭":
+    "2.그럭저럭":
         e "너무해"
 
-    "3. 아니 전혀":
+    "3.아니 전혀":
+        e "흠"
+    
+    e "그럼그럼 너 나 좋아해?"
+    
+menu:
+    "1.응 좋아해":
+        e "우와 기뻐"
+
+    "2.그럭저럭":
+        e "너무해"
+
+    "3.아니 전혀":
         e "흠"
 
-label counseling:
+jump week1
 
-    e "상담 1주차입니다."
+label week1:
 
-    e "총 5개의 질문을 할 것이고 호감도가 답에 따라 달라질 예정입니다"
+    "1주차 시작"
 
-    e "웅?"
+    e "나는 귀여워?"
 
 menu:
-    "1. 응 좋아해":
+    "1.응 귀여워":
+        $ affection += 2
         e "우와 기뻐"
 
-    "2. 그럭저럭":
+    "2.그럭저럭":
+        $ affection += 1
         e "너무해"
 
-    "3. 아니 전혀":
+    "3.아니 전혀":
+        $ affection += 0
         e "흠"
-        
-return
+
+    
+if affection >= 2:
+        "회상 해금!"
+
+jump week2
+
+label week2:
+
+    "2주차 시작"
+
+    e "나는 멋있어?"
+
+menu:
+    "1.응":
+        $ affection += 2
+        e "우와 기뻐"
+
+    "2.뭐 그냥 그래":
+        $ affection += 1
+        e "너무해"
+
+    "3.놉":
+        $ affection += 0
+        e "흠"
+
+    
+if affection < 3:
+        jump bad_ending
+
+if affection >= 5:
+        "회상2 해금"
+
+if affection >= 7:
+        $ saw_date_event = True
+        jump date_event
+
+jump week3
+
+
+
+

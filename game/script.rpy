@@ -2,6 +2,7 @@
 
 default week = 1
 default affection = 0
+default expaffection = 0
 default saw_date_event = False
 
 # image 문을 사용해 이미지를 정의합니다.
@@ -51,14 +52,17 @@ e "나는 귀여워?"
 menu:
     "1.응 귀여워":
         $ affection += 2
+        $ expaffection += 2
         e "우와 기뻐"
 
     "2.그럭저럭":
         $ affection += 1
+        $ expaffection += 1
         e "너무해"
 
     "3.아니 전혀":
         $ affection += 0
+        $ expaffection += 0
         e "흠"
 
 e "귀여워어어?"
@@ -66,14 +70,17 @@ e "귀여워어어?"
 menu:
     "1.응 귀여워":
         $ affection += 2
+        $ expaffection += 2
         e "우와 기뻐"
 
     "2.그럭저럭":
         $ affection += 1
+        $ expaffection += 1
         e "너무해"
 
     "3.아니 전혀":
         $ affection += 0
+        $ expaffection += 0
         e "흠"
     
 if affection >= 2:

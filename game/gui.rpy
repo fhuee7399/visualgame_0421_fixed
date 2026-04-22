@@ -59,7 +59,7 @@ define gui.interface_text_color = '#ffffff'
 ## 글자와 글자 크기 ###################################################################
 
 ## 인-게임 글자에 사용됩니다.
-define gui.text_font = "Pretendard-SemiBold.otf"
+define gui.text_font = "Pretendard-Regular.otf"
 
 ## 캐릭터의 이름에 사용됩니다.
 define gui.name_text_font = "SourceHanSansLite.ttf"

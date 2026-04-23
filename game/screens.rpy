@@ -374,12 +374,14 @@ style navigation_button_text:
     font "Cafe24Shiningstar.otf"
     size 60
     color "#E4FFFA"
+    hover_color "#FFA28D"
     outlines [(3, "#868070", 0, 0)]
     xalign 0.5
     text_align 0.5
 
 style navigation_button_text_hover:
     color "#FFA28D"
+    hover_color "#FFA28D"
 
 
 ## Main Menu 스크린 ###############################################################

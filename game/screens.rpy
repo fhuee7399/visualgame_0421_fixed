@@ -101,7 +101,7 @@ screen say(who, what):
         $ bg = "gui/dialogue_box_haeun.png"
     elif who == "주치의":
         $ bg = "gui/dialogue_box_doctor.png"
-    elif who == "준성" or who == "???":
+    elif who == "준성":
         $ bg = "gui/dialogue_box_junsung.png"
     else:
         $ bg = "gui/dialogue_box_system.png"

@@ -327,41 +327,26 @@ screen navigation():
 
     vbox:
         style_prefix "navigation"
-
         xalign 0.5
         yalign 0.9
-
         spacing gui.navigation_spacing
 
         if main_menu:
-
             textbutton _("새 게임") action Start()
+            textbutton _("이어하기") action ShowMenu("load")
+            textbutton _("설정") action ShowMenu("preferences")
 
         else:
-
             textbutton _("대사록") action ShowMenu("history")
-
             textbutton _("저장하기") action ShowMenu("save")
-
-        textbutton _("이어하기") action ShowMenu("load")
-
-        textbutton _("설정") action ShowMenu("preferences")
-
-        if _in_replay:
-
-            textbutton _("리플레이 끝내기") action EndReplay(confirm=True)
-
-        elif not main_menu:
-
+            textbutton _("설정") action ShowMenu("preferences")
             textbutton _("메인 메뉴") action MainMenu()
 
+        if _in_replay:
+            textbutton _("리플레이 끝내기") action EndReplay(confirm=True)
 
         if renpy.variant("pc"):
-
-            ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
-            ## 합니다.
             textbutton _("종료") action Quit(confirm=not main_menu)
-
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -502,7 +487,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
                     transclude
 
-    use navigation
+    # use navigation
 
     textbutton _("돌아가기"):
         style "return_button"

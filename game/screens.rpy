@@ -249,7 +249,8 @@ style choice_vbox:
     spacing gui.choice_spacing
 
 style choice_button is default:
-    properties gui.button_properties("choice_button")
+    background "gui/selection_box_nonselect.png"
+    hover_background "gui/selection_box_select.png"
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")

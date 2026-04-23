@@ -12,14 +12,15 @@ default saw_date_event = False
 define j = Character("재우")
 define h = Character("하은")
 define d = Character("서진")
-define p = Character("준성")
+define p = Character("준성", window_background="gui/dialogue_box_junsung.png")
+define p_hidden = Character ("???", kind=p)
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-
-    p "프롤로그입니다."
+# 과거회상
+    "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."
    
-    h "너 나 좋아해?"
+    p_hidden "늦게 온 사람이 음료수 사기."
 
 menu:
     p "너 나 좋아해?"

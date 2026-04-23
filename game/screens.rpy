@@ -117,15 +117,17 @@ screen say(who, what):
             # ✅ 이름 (하얀칸 중앙 느낌)
             if who:
                 text who id "who" style "say_label":
-                    xpos 120
-                    ypos 30
+                    xpos 50
+                    ypos 8
                     xanchor 0.0
                     yanchor 0.0
+                    text_align 0.5
+                    
 
             # ✅ 대사 텍스트 (왼쪽 정렬 + 아래쪽)
             text what id "what" style "say_dialogue":
-                xpos 180
-                ypos 120
+                xpos 40
+                ypos 80
                 xanchor 0.0
                 yanchor 0.0
                 textalign 0.0

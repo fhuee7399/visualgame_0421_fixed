@@ -119,7 +119,7 @@ screen say(who, what):
             # ✅ 이름 (하얀칸 중앙 느낌)
             if who:
                 text who id "who" style "say_label":
-                    xpos 50
+                    xpos 60
                     ypos 8
                     xanchor 0.0
                     yanchor 0.0
@@ -263,7 +263,7 @@ style choice_button is default:
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
-    xalign 0.0
+    xalign 0.1
     yalign 0.5
 
 

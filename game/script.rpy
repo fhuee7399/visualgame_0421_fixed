@@ -11,7 +11,7 @@ default saw_date_event = False
 # 게임에서 사용할 캐릭터를 정의합니다.
 define j = Character("재우")
 define h = Character("하은")
-define d = Character("주치의")
+define d = Character("서진")
 define p = Character("준성")
 
 # 여기에서부터 게임이 시작합니다.
@@ -25,10 +25,10 @@ menu:
     "아아아":
         d "우와 기뻐"
 
-    "2.그럭저럭":
+    "그럭저럭":
         j "너무해"
 
-    "3.아니 전혀":
+    "아니 전혀":
         j "흠"
     
     h "그럼그럼 너 나 좋아해?"

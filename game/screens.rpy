@@ -104,7 +104,7 @@ screen say(who, what):
     elif who == "준성":
         $ bg = "gui/dialogue_box_junsung.png"
     else:
-        $ bg = "gui/dialogue_box_doctor.png"
+        $ bg = "gui/dialogue_box_system.png"
 
     window:
         background bg
@@ -397,11 +397,8 @@ screen main_menu():
     ## 이렇게 하면 다른 메뉴 화면이 모두 교체됩니다.
     tag menu
 
-    add gui.main_menu_background
+    add "gui/mainscreen_whitelog.png"
 
-    ## 이 빈 프레임은 기본 메뉴를 어둡게 만듭니다.
-    frame:
-        style "main_menu_frame"
 
     ## use 명령어로 스크린 내에 다른 스크린을 불러옵니다. 메인 메뉴 스크린의 내
     ## 용물은 navigation 스크린에 있습니다.
@@ -411,13 +408,6 @@ screen main_menu():
 
         vbox:
             style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
-
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox

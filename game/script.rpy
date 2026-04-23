@@ -12,11 +12,12 @@ default saw_date_event = False
 define j = Character("재우")
 define h = Character("하은")
 define d = Character("주치의")
+define p = Character("준성")
 
 # 여기에서부터 게임이 시작합니다.
 label start:
 
-    j "프롤로그입니다."
+    p "프롤로그입니다."
    
     h "너 나 좋아해?"
 

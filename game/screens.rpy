@@ -232,28 +232,39 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
+    window:
+        xpos 667
+        ypos 100
+        background None
+
+        vbox:
+            spacing 20
+
+            for i in items:
+                textbutton i.caption:
+                    action i.action
 
 
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
 
-style choice_vbox:
+style choice_vbox is default:
     xalign 0.5
-    ypos 405
+    ypos 620
     yanchor 0.5
-
-    spacing gui.choice_spacing
+    spacing 15
 
 style choice_button is default:
     background "gui/selection_box_nonselect.png"
     hover_background "gui/selection_box_select.png"
+    xsize 950
+    ysize 90
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    xalign 0.0
+    yalign 0.5
 
 
 ## Quick Menu 스크린 ##############################################################

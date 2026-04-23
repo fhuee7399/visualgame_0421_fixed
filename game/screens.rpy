@@ -328,14 +328,14 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xalign 0.5
+        yalign 0.9
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("시작하기") action Start()
+            textbutton _("새 게임") action Start()
 
         else:
 
@@ -343,9 +343,9 @@ screen navigation():
 
             textbutton _("저장하기") action ShowMenu("save")
 
-        textbutton _("불러오기") action ShowMenu("load")
+        textbutton _("이어하기") action ShowMenu("load")
 
-        textbutton _("환경설정") action ShowMenu("preferences")
+        textbutton _("설정") action ShowMenu("preferences")
 
         if _in_replay:
 
@@ -355,18 +355,12 @@ screen navigation():
 
             textbutton _("메인 메뉴") action MainMenu()
 
-        textbutton _("버전정보") action ShowMenu("about")
-
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## 도움말 메뉴는 모바일 디바이스와 맞지 않아 불필요합니다.
-            textbutton _("조작방법") action ShowMenu("help")
 
         if renpy.variant("pc"):
 
             ## iOS에서는 종료 버튼이 금지되어 있으며 Android 및 웹에서는 불필요
             ## 합니다.
-            textbutton _("종료하기") action Quit(confirm=not main_menu)
+            textbutton _("종료") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -381,6 +375,8 @@ style navigation_button_text:
     size 60
     color "#E4FFFA"
     outlines [(3, "#868070", 0, 0)]
+    xalign 0.5
+    text_align 0.5
 
 style navigation_button_text_hover:
     color "#FFA28D"

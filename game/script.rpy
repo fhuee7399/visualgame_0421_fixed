@@ -9,36 +9,38 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define e = Character('아이린', color="#c8ffc8")
+define j = Character("재우", window_background="gui/dialogue_box_jaeu.png")
+define h = Character("하은", window_background="gui/dialogue_box_haeun.png")
+define d = Character("주치의", window_background="gui/dialogue_box_doctor.png")
 
 # 여기에서부터 게임이 시작합니다.
 label start:
 
-    e "프롤로그입니다."
+    j "프롤로그입니다."
    
-    e "너 나 좋아해?"
+    h "너 나 좋아해?"
 
 menu:
     "1.응 좋아해":
-        e "우와 기뻐"
+        d "우와 기뻐"
 
     "2.그럭저럭":
-        e "너무해"
+        j "너무해"
 
     "3.아니 전혀":
-        e "흠"
+        j "흠"
     
-    e "그럼그럼 너 나 좋아해?"
+    h "그럼그럼 너 나 좋아해?"
     
 menu:
     "1.응 좋아해":
-        e "우와 기뻐"
+        h "우와 기뻐"
 
     "2.그럭저럭":
-        e "너무해"
+        h "너무해"
 
     "3.아니 전혀":
-        e "흠"
+        h "흠"
 
 jump week1
 
@@ -47,41 +49,41 @@ label week1:
 
     "1주차 시작"
 
-e "나는 귀여워?"
+h "나는 귀여워?"
 
 menu:
     "1.응 귀여워":
         $ affection += 2
         $ expaffection += 2
-        e "우와 기뻐"
+        h "우와 기뻐"
 
     "2.그럭저럭":
         $ affection += 1
         $ expaffection += 1
-        e "너무해"
+        h "너무해"
 
     "3.아니 전혀":
         $ affection += 0
         $ expaffection += 0
-        e "흠"
+        h "흠"
 
-e "귀여워어어?"
+h "귀여워어어?"
 
 menu:
     "1.응 귀여워":
         $ affection += 2
         $ expaffection += 2
-        e "우와 기뻐"
+        h "우와 기뻐"
 
     "2.그럭저럭":
         $ affection += 1
         $ expaffection += 1
-        e "너무해"
+        h "너무해"
 
     "3.아니 전혀":
         $ affection += 0
         $ expaffection += 0
-        e "흠"
+        h "흠"
     
 if affection >= 2:
         "회상 1 해금!"
@@ -95,15 +97,15 @@ if affection < 2:
 
 label week1feedback:
 if affection <= 1:
-    e "낮은 피드백"
+    j "낮은 피드백"
 
 
 elif 1 < affection < 4:
-    e "중간 피드백"
+    j "중간 피드백"
 
 
 else:
-    e "높은 피드백"
+    j "높은 피드백"
 
 jump week2
 
@@ -112,35 +114,35 @@ label week2:
 
     "2주차 시작"
 
-    e "나는 멋있어?"
+    d "나는 멋있어?"
 
 menu:
     "1.응":
         $ affection += 2
-        e "우와 기뻐"
+        d "우와 기뻐"
 
     "2.뭐 그냥 그래":
         $ affection += 1
-        e "너무해"
+        d "너무해"
 
     "3.놉":
         $ affection += 0
-        e "흠"
+        d "흠"
 
-e "너를 좋아하는 것 같아."
+j "너를 좋아하는 것 같아."
 
 menu:
     "1.응":
         $ affection += 2
-        e "우와 기뻐"
+        j "우와 기뻐"
 
     "2.뭐 그냥 그래":
         $ affection += 1
-        e "너무해"
+        j "너무해"
 
     "3.놉":
         $ affection += 0
-        e "흠"
+        j "흠"
     
 if affection < 3:
         jump bad_ending
@@ -159,33 +161,33 @@ label week3:
 
     "3주차 시작"
 
-    e "안녕"
+    h "안녕"
 
 menu:
     "1.응 반가워":
         $ affection += 2
-        e "우와 기뻐"
+        h "우와 기뻐"
 
     "2.응":
         $ affection += 1
-        e "너무해"
+        h "너무해"
 
     "3.안 반가움":
         $ affection += 0
-        e "흠"
+        h "흠"
 
 menu:
     "1.응 반가워":
         $ affection += 2
-        e "우와 기뻐"
+        d "우와 기뻐"
 
     "2.응":
         $ affection += 1
-        e "너무해"
+        d "너무해"
 
     "3.안 반가움":
         $ affection += 0
-        e "흠"
+        d "흠"
     
 if affection >= 9:
     "회상 3 해금"

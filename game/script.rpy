@@ -9,9 +9,9 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define j = Character("재우", window_background="gui/dialogue_box_jaeu.png")
-define h = Character("하은", window_background="gui/dialogue_box_haeun.png")
-define d = Character("주치의", window_background="gui/dialogue_box_doctor.png")
+define j = Character("재우")
+define h = Character("하은")
+define d = Character("주치의")
 
 # 여기에서부터 게임이 시작합니다.
 label start:

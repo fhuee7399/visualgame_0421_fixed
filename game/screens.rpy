@@ -95,17 +95,40 @@ style frame:
 
 screen say(who, what):
 
+    if who == "재우":
+        $ bg = "gui/dialogue_box_jaeu.png"
+    elif who == "하은":
+        $ bg = "gui/dialogue_box_haeun.png"
+    elif who == "주치의":
+        $ bg = "gui/dialogue_box_doctor.png"
+    else:
+        $ bg = "gui/dialogue_box_doctor.png"
+
     window:
-        id "window"
+        background bg
+        xalign 0.5
+        yalign 0.88
+        xsize 1600
+        ysize 300
 
-        if who is not None:
+        # 내부 자유 배치
+        fixed:
 
-            window:
-                id "namebox"
-                style "namebox"
-                text who id "who"
+            # ✅ 이름 (하얀칸 중앙 느낌)
+            if who:
+                text who id "who" style "say_label":
+                    xpos 120
+                    ypos 30
+                    xanchor 0.0
+                    yanchor 0.0
 
-        text what id "what"
+            # ✅ 대사 텍스트 (왼쪽 정렬 + 아래쪽)
+            text what id "what" style "say_dialogue":
+                xpos 180
+                ypos 120
+                xanchor 0.0
+                yanchor 0.0
+                textalign 0.0
 
 
     ## 사이드 이미지가 있는 경우 글자 위에 표시합니다. 휴대폰 환경에서는 보이지

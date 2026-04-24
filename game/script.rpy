@@ -14,6 +14,42 @@ define h = Character("하은")
 define d = Character("서진")
 define p = Character("준성")
 
+# 연출 메서드입니다.
+
+# 전환 애니메이션 출력
+label transition_week1(scene_name):
+    window hide
+
+    scene scene_name
+
+    show week1_transition_anim zorder 100
+    pause 2.0
+    hide week1_transition_anim
+
+    window show
+
+label transition_week2(scene_name):
+    window hide
+
+    scene scene_name
+
+    show week2_transition_anim zorder 100
+    pause 2.0
+    hide week1_transition_anim
+
+    window show
+
+label transition_week3(scene_name):
+    window hide
+
+    scene scene_name
+
+    show week3_transition_anim zorder 100
+    pause 2.0
+    hide week3_transition_anim
+
+    window show
+
 # 여기에서부터 게임이 시작합니다.
 label start:
 # 과거회상_프롤로그
@@ -94,6 +130,9 @@ label walk_pro:
 jump hospital_pro
 
 label hospital_pro:
+    call transition_week1("bg_hospital")
+
+    # 스크립트 시작
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
     j "뭐야, 먼저 왔네? 지하철 공사 때문에 늦을 줄 알았더니."
 

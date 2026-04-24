@@ -338,6 +338,7 @@ label jaewoo_return_home:
     jump past_flashback_2
 
 label past_flashback_2:
+    show dim_past
     scene bg_class_day
     "남자 아이와 여자 아이가 싸우는 듯한 소리가 들린다."
     show haeun_sil
@@ -363,7 +364,8 @@ label past_flashback_2:
     h_hidden "붙잡지마! 그냥 내 앞에서 사라져!"
     hide haeun_sil
     "남자아이가 여자아이를 뒤따라 달린다."
-    return
+    hide dim_past
+    jump week02_start
 
 
 label haeun_bad_ending:

@@ -137,95 +137,100 @@ jump hospital_pro
 
 label hospital_pro:
     scene bg_hospital
-    show seojin_emotionless_pri
+    show seojin_emotionless
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
-    show seojin_emotionless_pri
+    show seojin_emotionless
+    hide seojin_emotionless
     j "뭐야, 먼저 왔네? 지하철 공사 때문에 늦을 줄 알았더니."
-    show seojin_smile_pri
+    show seojin_smile
     d "난 자차로 왔지, 우리 원장님께선 차가 없던가? 하하"
-    show seojin_smile_pri
+    show seojin_smile
     j "아침부터 활기차네… 부럽다."
-    show seojin_smile_pri
+    show seojin_smile
     d "근데 너는 아직도 칠칠 맞게 옷에 커피를 흘려?"
-    show seojin_smile_pri
+    show seojin_smile
     "재우는 옷에 커피가 묻었는지 확인한다."
-    show seojin_smile_pri
+    show seojin_smile
     j "야! 너 진짜?"
-    show seojin_smile_pri
+    show seojin_smile
     d "야가 아니라 누나 해봐 누나."
-    show seojin_smile_pri
+    show seojin_smile
     "여성의 이름은 윤서진, 재우보다 1살 연상이지만 재우의 대학교 시절 친구이자 같은 대학 병원의 동료로 현재는 재우의 병원에서 일하고 있다."
-    show seojin_smile_pri
+    show seojin_smile
     j "서진씨, 예약하신 분 오실 시간이 되지 않았나요?"
-    show seojin_smile_pri
+    show seojin_smile
     d "원장님은 불리하실 때 꼭 환자 얘기 하시네요?"
-    show seojin_smile_pri
+    show seojin_smile
+    hide seojin_smile
     j "서진씨?"
-    show seojin_emotionless_bui
-    hide seojin_emotionless_bui
+    show seojin_emotionless
+    hide seojin_emotionless
     d "네네 알겠어요. 원장님. 일단 상담실에 가서 이야기 하죠?"
     
     # 백그라운드 상담실
     scene bg_counsel_day
-    show seojin_emotionless_bui
+    show seojin_emotionless
     "서진은 머리를 묶고, 재우와 상담실로 이동해 이야기를 이어간다."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     "서진은 머리를 묶고 차트를 가져와 브리핑을 시작한다."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "아침에 오시는 분들은 여성분 한 분, 남성분 한 분, 총 2분이네요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "이 남성분은 저번에 오셨던 분이네요. 서진씨 담당이였나요?"
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "네, 제가 맡을 거 같아요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "여성분 쪽은 원래 제가 주치의를 맡고 있던 환자인데 이 분을 원장님이 맡아주세요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "네, 그럼 여성분에 대해 브리핑 해주세요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "이 분 같은 경우 조금 특이케이스이신 거 같아요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "어떤 점에서요?"
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "보통의 환자들은 대부분 틀리더라도 원인을 지목하시는데 이 분은 모르겠다고 하시더라고요."
-    show seojin_emotionless_bui 
+    show seojin_emotionless 
     d "아예 원인 자체를 잊은 거 같아요. 아무래도 기억장애라고 생각돼요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "해리성 기억장애가 의심되는 거 같네요? 정신적으로 큰 충격을 받게 될 때 당시의 기억을 자기방어의 수단으로 잊어버리는 정신 질환이요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "네, 저도 그 질환을 의심하고 있어요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "처음에 원인의 이유를 모른다고 하셨을 때 다른 환자들처럼 둘러대시는 줄 알았는데"
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "몇 번의 질문에 대해서 답을 하는 모습을 보고 정말로 기억을 잊은 거 같으셨어요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "근데 그럼 이분이 내원하신 이유는 무엇 때문이라고 하셨나요?"
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "원인 모를 답답함? 그런 게 있다고 하시더라고요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     j "과거의 기억에서 감정만 그대로 남아 있을 수 있겠네요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
     d "그리고 약간의 우울증과 대인기피증의 증상을 보였어요."
-    show seojin_emotionless_bui
+    show seojin_emotionless
+    hide seojin_emotionless
     j "그렇군요. 서진씨가 상담하셨을 땐 어떤 느낌이였나요?"
-    show seojin_sad_pri
+    show seojin_sad
     d "음, 그렇네요… 조금 무반응을 하시는 경우가 많았던 거 같아요."
-    show seojin_sad_bui
+    show seojin_sad
+    hide seojin_sad
     d "대답을 해주셔도 단답형이셨고.."
-    show seojin_smile_bui
+    show seojin_smile
     j "참고해서 상담 진행 해볼게요. 여성분 성함은 어떻게 되시죠?"
-    show seojin_smile_bui
+    show seojin_smile
     d "\"이하은\"이라고 하셔요. 동갑이신 거 같은데 반하시면 안 되는 거 아시죠?"
-    show seojin_smile_bui
+    show seojin_smile
     j "서진씨, 걱정마세요. 저는 서진씨처럼 이상한 로맨스 영화 안 보니까요."
-    show seojin_smile_bui
+    show seojin_smile
     d "그게 무슨 말이죠? 원장님?"
-    show seojin_smile_bui
+    show seojin_smile
     j "아니에요. 서진씨도 준비하셔야죠."
-    show seojin_smile_bui
+    show seojin_smile
     d "마음의 준비 하셔야 할 거예요. 제가 봐도 이쁘더라고요."
-    show seojin_smile_bui
+    show seojin_smile
     j "걱정도 많으시다. 제가 그럴 사람으로 보여요?"
-    show seojin_smile_bui
+    show seojin_smile
+    hide seojin_smile
     d "네." 
 
     "재우를 놀리며 서진이 상담실을 빠져나간다."
@@ -270,83 +275,93 @@ label hospital_pro:
 
     j "이하은씨 들어오세요."
     #하은_첫_상담
-
+    show haeun_emotionless
     "하은이 상담실에 들어오자 백발과 다르게 붉은 눈이 눈에 들어온다."
-
+    show haeun_emotionless
     j "안녕하세요? (어디서 본 거 같은데)"
-
+    show haeun_emotionless
     j "여기 의자에 앉으시죠."
-
+    show haeun_emotionless
     "하은이 의자에 앉았다."
-
+    show haeun_emotionless
     j "안녕하세요. 하은씨, 저는 오늘부터 하은씨의 상담을 맡게 된 김재우라고 합니다."
-
+    show haeun_emotionless
     h "전에 상담하신 분은요?"
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "그분은 다른 업무가 생기셔서요. 아무래도 검진만 맡으실 거 같아요."
-
+    show haeun_mad
     h "거짓말. 날 피하려고 핑계 대는 거지."
-
+    show haeun_mad
     "서진의 문진표와 같이 하은은 잘 협조하지 않는 성격인 듯 하다."
-
+    show haeun_mad
     "하지만 재우는 노련하게 상담을 이어간다."
-
+    show haeun_mad
+    hide haeun_mad
     j "정말이에요, 서진 선생님이 일이 많아지셔서 제가 하은씨의 상담을 맡게 된 거예요."
-
+    show haeun_question
     h "정말요?"
-
+    show haeun_question
+    hide haeun_question
     j "그럼요. 하은씨가 싫어서가 아니라 서진 선생님이 바쁘셔서 그런 거예요."
-
+    show haeun_emotionless
     h "믿어드릴게요."
-
+    show haeun_emotionless
     j "(휴, 넘어간 건가?)"
-
+    show haeun_emotionless
     j "그럼 소개는 여기까지 하고 이제 상담을 시작할게요."
-
+    show haeun_emotionless
     "재우는 준비했던 질문들로 편안한 분위기를 구성하려 한다."
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "오늘 지하철 공사 때문에 오기 불편하셨을 거 같아요. 어떤 방법으로 오셨나요?"
-
+    show haeun_question
     h "그게 무슨 의미가 있죠?"
-
+    show haeun_question
+    hide haeun_question
     j "순수하게 궁금해서요. 저는 보통 지하철을 타고 다니거든요."
-
+    show haeun_emotionless
     j "그런데 오늘 공사를 한다고 해서 다른 방식으로 왔거든요."
-
+    show haeun_emotionless
     h "그게 저와의 상담에 무슨 도움이 되는지 모르겠네요."
-
+    show haeun_emotionless
     "예상은 했으나 더 철벽 같은 대답이 돌아왔다."
-
+    show haeun_emotionless
     j "그럼 좀 더 도움이 될 만한 질문을 할게요."
-
+    show haeun_emotionless
     h "네, 그러시죠."
-
+    show haeun_emotionless
     j "서진씨한테 듣기론 이유 모를 우울감 때문에 오신 건가요?"
-
+    show haeun_emotionless
     h "맞는데요?"
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "혹시 이것 이외에 따로 오시게 된 계기가 있나요? 심적인 변화나 다른 이유 같은 거요."
-
+    show haeun_sad
     h "말하기 싫어요."
-
+    show haeun_sad
     "재우는 하은의 반응에 개인적인 물음을 시도해 본다."
-
+    show haeun_sad
     j "그래도 얘기해주시면 안 될까요?"
-
+    show haeun_sad
     j "어떤 이유로 그런 아픔을 가지셨는지 알아야 할 거 같아요."
-
+    show haeun_sad
     j "(너무 공격적으로 물어본 걸까?)"
+    show haeun_sad
     menu:
         h "왜 그렇게 날 도와주려는 거야?"
         "모르겠어요. 하지만 하은씨를 볼 때 마다 도와주고 싶다는 생각이 들어요.":
+                hide haeun_sad
+                show haeun_question
                 j "저도 왜 그랬는지는 모르겠지만"
-
+                show haeun_question
                 j "하은씨를 볼 때마다 저도 뭔가 모를 감정이 떠올라요."
-
+                show haeun_question
                 j "하은씨는 이 감정이 우울감이신 거니까... 하은씨를 더욱 도와드리고 싶네요."
-
+                show haeun_question
+                hide haeun_question
                 "재우는 하고 싶은 말을 하고 얼굴이 붉어진 것을 느낀다."
-
+                show haeun_
                 h "선생님은 솔직하신 분이시군요."
 
                 h "말해드릴게요."

@@ -64,6 +64,7 @@ label start:
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
     show junsung_sil
     "늦게 온 사람이 음료수 사기!"
+    hide junsung_sil
     show haeun_sil
     "야! 먼저 뛰면 어떡해."
     show haeun_sil

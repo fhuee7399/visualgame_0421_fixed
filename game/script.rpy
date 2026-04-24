@@ -17,50 +17,50 @@ define p = Character("준성")
 # 연출 메서드입니다.
 
 # 전환 애니메이션 출력
-label transition_week1(scene_name):
+label transition_week1:
     window hide
-
-    scene scene_name
 
     show week1_transition_anim zorder 100
     pause 2.0
     hide week1_transition_anim
 
     window show
+    return
 
-label transition_week2(scene_name):
+label transition_week2:
     window hide
-
-    scene scene_name
 
     show week2_transition_anim zorder 100
     pause 2.0
-    hide week1_transition_anim
+    hide week2_transition_anim
 
     window show
+    return
 
-label transition_week3(scene_name):
+label transition_week3:
     window hide
-
-    scene scene_name
 
     show week3_transition_anim zorder 100
     pause 2.0
     hide week3_transition_anim
 
     window show
+    return
 
 # 여기에서부터 게임이 시작합니다.
 label start:
 # 과거회상_프롤로그
     scene bg_park_day
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
+    show junsung_sil
     "늦게 온 사람이 음료수 사기."
+    show haeun_sil
     "야! 먼저 뛰면 어떡해."
     "나의 뒤엔 여자 아이 한명이 따라오고 있다."
     "잠깐만 같이 가."
 
 # 재우파트_프롤로그
+    scene bg_house_day
     "햇빛이 들어오는 방에서 오전 7시에 맞춘 알람이 울리며 재우가 깨어난다."
     j "오늘도 출근이네…"
     "재우는 병원에 갈 준비를 하면서 오늘 업무에 대해 정리한다."
@@ -69,6 +69,7 @@ label start:
     "그렇게 상담과 출근 준비를 끝낸 뒤 집을 나선다."
 
 # 출근길_프롤로그
+    scene bg_street_day
     "거리로 나선 재우는 평소와 같이 지하철을 타려간다."
     j "아 맞다 오늘 공사하는 날이였던가?"
     "재우는 집앞의 병원으로 향하는 버스 정류장으로 향한다."
@@ -85,6 +86,7 @@ menu:
         jump walk_pro
 
 label bus_pro:
+    scene bg_bus
     j "저기 버스가 오네. 딱 좋은 타이밍인걸?"
     "출근 시간의 버스 답게 많은 사람들이 타고 있다."
     "재우는 수많은 사람들에 끼이게 되었다."
@@ -96,9 +98,11 @@ label bus_pro:
     "때마침 버스가 병원에 서게 된다."
     j "드디어!"
     "재우는 빠르게 버스에서 내려 병원으로 향한다."
-jump hospital_pro
+# jump hospital_pro
+jump week01_start
 
 label taxi_pro:
+    scene bg_taxi
     j "오 택시는 오랜만인걸? 여기요!"
     "재우는 택시를 향해 손을 흔든다."
     "택시가 재우의 앞에 멈추고 재우는 택시에 탑승한다."
@@ -113,6 +117,7 @@ label taxi_pro:
 jump hospital_pro
 
 label walk_pro:
+    scene bg_street_day
     j "오랜만에 걸어가볼까?"
     "재우는 병원을 향해 걷기 시작했다."
     j "가끔씩을 걸어가볼까? 생각보다 좋다."
@@ -130,9 +135,7 @@ label walk_pro:
 jump hospital_pro
 
 label hospital_pro:
-    call transition_week1("bg_hospital")
-
-    # 스크립트 시작
+    scene bg_hospital
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
     j "뭐야, 먼저 왔네? 지하철 공사 때문에 늦을 줄 알았더니."
 
@@ -159,6 +162,7 @@ label hospital_pro:
     d "네네 알겠어요. 원장님. 일단 상담실에 가서 이야기 하죠?"
 
     # 백그라운드 상담실
+    scene bg_counsel_day
     "서진은 머리를 묶고, 재우와 상담실로 이동해 이야기를 이어간다."
 
     "서진은 머리를 묶고 차트를 가져와 브리핑을 시작한다."
@@ -373,6 +377,7 @@ label hospital_pro:
                 jump firstmeeting_pro
 
 label firstmeeting_pro:
+    scene bg_counsel_day
     j "시간이 된 거 같네요."
 
     h "그렇네요."
@@ -396,13 +401,13 @@ label firstmeeting_pro:
     j "휴, 생각보다 힘들었다."
 
     "재우는 마무리를 한 뒤 귀가 준비를 한다."
-
+    scene bg_street_night
     "재우는 업무를 마치고 집으로 향한다."
 
     j "다행이다. 공사가 끝났네."
 
     "재우는 지하철을 타고 집으로 향했다."
-
+    scene bg_house_night
     j "드디어 집이다..."
 
     "재우는 저녁을 먹고 씻은 뒤 소파에 눕는다."
@@ -415,7 +420,8 @@ label firstmeeting_pro:
 jump pastevent1
 
 label pastevent1:
-
+    scene bg_class_day
+    show dim_past
     "지지직..."
 
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."

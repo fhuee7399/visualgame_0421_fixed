@@ -1,5 +1,5 @@
 label week01_start:
-    call transition_week1
+    call transition_week1 from _call_transition_week1
     jump jaewoo_wake_up
 
 label jaewoo_wake_up:

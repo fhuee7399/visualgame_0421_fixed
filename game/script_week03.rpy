@@ -1,7 +1,7 @@
 label week03_start:
     scene bg_bus
     
-    call transition_week3
+    call transition_week3 from _call_transition_week3
 
     j "저기 버스가 오네. 딱 좋은 타이밍인걸?"
     "출근 시간의 버스 답게 많은 사람들이 타고 있다."

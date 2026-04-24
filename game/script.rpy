@@ -10,19 +10,19 @@ default saw_date_event = False
 
 # 게임에서 사용할 캐릭터를 정의합니다.
 # 재우
-define j = Character("재우", show_box_kind="jaeu")
+define j = Character("재우", show_box_kind="jaeu", what_slow_cps=20)
 define j_hidden = Character("???", kind=j)
 
 # 하은
-define h = Character("하은", show_box_kind="haeun")
+define h = Character("하은", show_box_kind="haeun", what_slow_cps=20)
 define h_hidden = Character("???", kind=h)
 
 # 서진
-define d = Character("서진", show_box_kind="doctor")
+define d = Character("서진", show_box_kind="doctor", what_slow_cps=20)
 define d_hidden = Character("???", kind=d)
 
 # 준성
-define p = Character("준성", show_box_kind="junsung")
+define p = Character("준성", show_box_kind="junsung", what_slow_cps=20)
 define p_hidden = Character("???", kind=p)
 
 # 시스템

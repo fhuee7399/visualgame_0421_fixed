@@ -473,10 +473,10 @@ label pastevent1:
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
     show haeun_sil
     hide haeun_sil
-    h_hidden "쫓아오지 마!!! /%%/$/#/$/"
+    h_hidden "쫓아오지 마!!! \%\$\#\$"
     show junsung_sil
     hide junsung_sil
-    p_hidden "잠깐만! /%%/$/#/$/ 내 말 좀 들어봐!"
+    p_hidden "잠깐만! \%\$\#\$ 내 말 좀 들어봐!"
     show haeun_sil
     hide haeun_sil
     h_hidden "싫어!"

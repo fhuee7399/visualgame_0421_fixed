@@ -68,13 +68,13 @@ label start:
     scene bg_park_day
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
     show junsung_sil
-    "늦게 온 사람이 음료수 사기!"
+    p_hidden "늦게 온 사람이 음료수 사기!"
     hide junsung_sil
     show haeun_sil
-    "야! 먼저 뛰면 어떡해."
+    j_hidden "야! 먼저 뛰면 어떡해."
     show haeun_sil
     "나의 뒤엔 여자 아이 한명이 따라오고 있다."
-    "잠깐만 같이 가."
+    h_hidden "잠깐만 같이 가."
 
 # 재우파트_프롤로그
     scene bg_house_day
@@ -168,7 +168,7 @@ label hospital_pro:
     show seojin_smile
     j "야! 너 진짜?"
     show seojin_smile
-    d "야가 아니라 누나 해봐 누나."
+    d "'야'가 아니라 누나 해봐 누나."
     show seojin_smile
     "여성의 이름은 윤서진, 재우보다 1살 연상이지만 재우의 대학교 시절 친구이자 같은 대학 병원의 동료로 현재는 재우의 병원에서 일하고 있다."
     show seojin_smile
@@ -473,201 +473,15 @@ label pastevent1:
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
     show haeun_sil
     hide haeun_sil
-    "쫓아오지 마!!!"
+    h_hidden "쫓아오지 마!!! /%%/$/#/$/"
     show junsung_sil
     hide junsung_sil
-    "잠깐만! 내 말 좀 들어봐!"
+    p_hidden "잠깐만! /%%/$/#/$/ 내 말 좀 들어봐!"
     show haeun_sil
     hide haeun_sil
-    "싫어!"
+    h_hidden "싫어!"
     show junsung_sil
     hide junsung_sil
-    "야! 기다려봐! 잠깐만!"
+    p_hidden "야! 기다려봐! 잠깐만!"
     hide dim_past
     jump week01_start
-
-
-
-jump week1
-
-label week1:
-    $ affection = 0
-
-    "1주차 시작"
-
-h "나는 귀여워?"
-
-menu:
-    "1.응 귀여워":
-        $ affection += 2
-        $ expaffection += 2
-        h "우와 기뻐"
-
-    "2.그럭저럭":
-        $ affection += 1
-        $ expaffection += 1
-        h "너무해"
-
-    "3.아니 전혀":
-        $ affection += 0
-        $ expaffection += 0
-        h "흠"
-
-h "귀여워어어?"
-
-menu:
-    "1.응 귀여워":
-        $ affection += 2
-        $ expaffection += 2
-        h "우와 기뻐"
-
-    "2.그럭저럭":
-        $ affection += 1
-        $ expaffection += 1
-        h "너무해"
-
-    "3.아니 전혀":
-        $ affection += 0
-        $ expaffection += 0
-        h "흠"
-    
-if affection >= 2:
-        "회상 1 해금!"
-
-        jump week1feedback
-
-
-if affection < 2:
-
-    jump week1feedback
-
-label week1feedback:
-if affection <= 1:
-    j "낮은 피드백"
-
-
-elif 1 < affection < 4:
-    j "중간 피드백"
-
-
-else:
-    j "높은 피드백"
-
-jump week2
-
-label week2:
-    $ affection = 0
-
-    "2주차 시작"
-
-    d "나는 멋있어?"
-
-menu:
-    "1.응":
-        $ affection += 2
-        d "우와 기뻐"
-
-    "2.뭐 그냥 그래":
-        $ affection += 1
-        d "너무해"
-
-    "3.놉":
-        $ affection += 0
-        d "흠"
-
-j "너를 좋아하는 것 같아."
-
-menu:
-    "1.응":
-        $ affection += 2
-        j "우와 기뻐"
-
-    "2.뭐 그냥 그래":
-        $ affection += 1
-        j "너무해"
-
-    "3.놉":
-        $ affection += 0
-        j "흠"
-    
-if affection < 3:
-        jump bad_ending
-
-if affection >= 5:
-        "회상 2 해금"
-
-if affection >= 7:
-        $ saw_date_event = True
-        jump date_event
-
-jump week3
-
-label week3:
-    $ affection = 0
-
-    "3주차 시작"
-
-    h "안녕"
-
-menu:
-    "1.응 반가워":
-        $ affection += 2
-        h "우와 기뻐"
-
-    "2.응":
-        $ affection += 1
-        h "너무해"
-
-    "3.안 반가움":
-        $ affection += 0
-        h "흠"
-
-menu:
-    "1.응 반가워":
-        $ affection += 2
-        d "우와 기뻐"
-
-    "2.응":
-        $ affection += 1
-        d "너무해"
-
-    "3.안 반가움":
-        $ affection += 0
-        d "흠"
-    
-if affection >= 9:
-    "회상 3 해금"
-
-jump final_branch
-
-if affection < 9:
-    jump final_branch
-
-label final_branch:
-
-    if affection < 5:
-        jump bad_ending
-
-    if not saw_date_event:
-        jump normal_ending
-
-    if final_piece:
-        jump true_ending
-
-    jump good_ending
-
-label bad_ending:
-    "배드 엔딩"
-    return
-
-label normal_ending:
-    "노멀 엔딩"
-    return
-
-label good_ending:
-    "굿 엔딩"
-    return
-
-label true_ending:
-    "트루 엔딩"
-    return

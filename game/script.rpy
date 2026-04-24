@@ -1,4 +1,4 @@
-﻿# 이 파일에 게임 스크립트를 입력합니다.
+# 이 파일에 게임 스크립트를 입력합니다.
 
 default week = 1
 default affection = 0
@@ -376,6 +376,7 @@ label firstmeeting_pro:
 jump pastevent1
 
 label pastevent1:
+
     "지지직..."
 
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."

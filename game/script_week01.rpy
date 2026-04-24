@@ -338,8 +338,8 @@ label jaewoo_return_home:
     jump past_flashback_2
 
 label past_flashback_2:
-    show dim_past
     scene bg_class_day
+    show dim_past
     "남자 아이와 여자 아이가 싸우는 듯한 소리가 들린다."
     show haeun_sil
     h_hidden "너무한거 아니야?"

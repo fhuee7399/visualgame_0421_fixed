@@ -361,15 +361,16 @@ label hospital_pro:
                 show haeun_question
                 hide haeun_question
                 "재우는 하고 싶은 말을 하고 얼굴이 붉어진 것을 느낀다."
-                # 하은 happy 예정 
+                show haeun_happy 
                 h "선생님은 솔직하신 분이시군요."
-
+                show haeun_happy
                 h "말해드릴게요."
-
+                show haeun_happy
                 j "고마워요."
-
+                show haeun_happy
                 h "우울감에서 벗어나서 자유로워지고 싶어요."
-
+                show haeun_happy
+                hide haeun_happy
                 h "우울한 이유를 몰라요. 그걸 알고 싶어요."
                 show haeun_emotionless
                 hide haeun_emotionless

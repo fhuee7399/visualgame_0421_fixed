@@ -93,6 +93,18 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+# 대사 흔들림 트랜지션
+# 변수
+default dialogue_shake_on = False
+# 트랜지션
+transform dialogue_shake:
+    xoffset 0
+    linear 0.03 xoffset -8
+    linear 0.03 xoffset 8
+    linear 0.03 xoffset -6
+    linear 0.03 xoffset 6
+    linear 0.03 xoffset 0
+
 screen say(who, what, box_kind=None):
 
     if box_kind == "jaeu":
@@ -109,6 +121,10 @@ screen say(who, what, box_kind=None):
         $ bg = "gui/dialogue_box_system_removed_name.png"
 
     window:
+        # 변수가 True일 때 대사 흔들림 트랜지션 적용
+        if dialogue_shake_on:
+            at dialogue_shake
+
         background bg
         xalign 0.5
         yalign 0.88

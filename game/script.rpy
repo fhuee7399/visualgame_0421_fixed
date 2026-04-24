@@ -108,7 +108,7 @@ label bus_pro:
     "출근 시간의 버스 답게 많은 사람들이 타고 있다."
     "재우는 수많은 사람들에 끼이게 되었다."
     j "어우 내 병원 가는 것도 이렇게 고생해야 돼?"
-    "누군가가 의도치 않게 재우의 명치를 친다."
+    "누군가가 의도치 않게 재우의 명치를 친다." with vpunch
     j "어억!!.."
     j "팔꿈치로 명치를 맞다니… 이래서 출근시간 버스는 지옥이라는 건가?"
     j "아프다… 언제 도착하지?"
@@ -473,13 +473,17 @@ label pastevent1:
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
     show haeun_sil
     hide haeun_sil
+    $ dialogue_shake_on = True
     h_hidden "쫓아오지 마!!! \%\$\#\$"
+    $ dialogue_shake_on = False
     show junsung_sil
     hide junsung_sil
     p_hidden "잠깐만! \%\$\#\$ 내 말 좀 들어봐!"
     show haeun_sil
     hide haeun_sil
+    $ dialogue_shake_on = True
     h_hidden "싫어!"
+    $ dialogue_shake_on = False
     show junsung_sil
     hide junsung_sil
     p_hidden "야! 기다려봐! 잠깐만!"

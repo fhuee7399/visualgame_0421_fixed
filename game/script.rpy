@@ -56,9 +56,6 @@ label transition_week3:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
-    jump week01_start
-    return
-
 # 과거회상_프롤로그
     scene bg_park_day
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
@@ -147,29 +144,29 @@ jump hospital_pro
 
 label hospital_pro:
     scene bg_hospital
-    show seojin_emotionless_pri
+    show seojin_emotionless
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
-    show seojin_emotionless_pri
+    show seojin_emotionless
     j "뭐야, 먼저 왔네? 지하철 공사 때문에 늦을 줄 알았더니."
-    show seojin_smile_pri
+    show seojin_smile
     d "난 자차로 왔지, 우리 원장님께선 차가 없던가? 하하"
-    show seojin_smile_pri
+    show seojin_smile
     j "아침부터 활기차네… 부럽다."
-    show seojin_smile_pri
+    show seojin_smile
     d "근데 너는 아직도 칠칠 맞게 옷에 커피를 흘려?"
-    show seojin_smile_pri
+    show seojin_smile
     "재우는 옷에 커피가 묻었는지 확인한다."
-    show seojin_smile_pri
+    show seojin_smile
     j "야! 너 진짜?"
-    show seojin_smile_pri
+    show seojin_smile
     d "야가 아니라 누나 해봐 누나."
-    show seojin_smile_pri
+    show seojin_smile
     "여성의 이름은 윤서진, 재우보다 1살 연상이지만 재우의 대학교 시절 친구이자 같은 대학 병원의 동료로 현재는 재우의 병원에서 일하고 있다."
-    show seojin_smile_pri
+    show seojin_smile
     j "서진씨, 예약하신 분 오실 시간이 되지 않았나요?"
-    show seojin_smile_pri
+    show seojin_smile
     d "원장님은 불리하실 때 꼭 환자 얘기 하시네요?"
-    show seojin_smile_pri
+    show seojin_smile
     j "서진씨?"
     show seojin_emotionless_bui
     hide seojin_emotionless_bui
@@ -217,7 +214,7 @@ label hospital_pro:
     d "그리고 약간의 우울증과 대인기피증의 증상을 보였어요."
     show seojin_emotionless_bui
     j "그렇군요. 서진씨가 상담하셨을 땐 어떤 느낌이였나요?"
-    show seojin_sad_pri
+    show seojin_sad
     d "음, 그렇네요… 조금 무반응을 하시는 경우가 많았던 거 같아요."
     show seojin_sad_bui
     d "대답을 해주셔도 단답형이셨고.."

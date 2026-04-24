@@ -103,8 +103,10 @@ screen say(who, what, box_kind=None):
         $ bg = "gui/dialogue_box_doctor.png"
     elif box_kind == "junsung":
         $ bg = "gui/dialogue_box_junsung.png"
-    else:
+    elif box_kind == "system":
         $ bg = "gui/dialogue_box_system.png"
+    else:
+        $ bg = "gui/dialogue_box_system_removed_name.png"
 
     window:
         background bg

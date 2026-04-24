@@ -385,6 +385,6 @@ label haeun_bad_ending:
     d "재우야... 하은이 어머니한테 연락이 왔는데..."
     d "하은이가 이제 우리 병원에 안 가겠다고 하셔..."
     j "그렇구나..."
-    "Bad Ending"
+    "[ Bad Ending ]"
     hide seojin_sad
     return

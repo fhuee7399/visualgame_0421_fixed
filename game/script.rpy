@@ -9,21 +9,27 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
+# 재우
 define j = Character("재우", show_box_kind="jaeu")
 define j_hidden = Character("???", kind=j)
 
+# 하은
 define h = Character("하은", show_box_kind="haeun")
 define h_hidden = Character("???", kind=h)
 
+# 서진
 define d = Character("서진", show_box_kind="doctor")
 define d_hidden = Character("???", kind=d)
 
+# 준성
 define p = Character("준성", show_box_kind="junsung")
 define p_hidden = Character("???", kind=p)
 
-# 연출 메서드입니다.
+# 시스템
+define sys = Character(show_box_kind="system")
 
 # 전환 애니메이션 출력
+# 0 -> 1주차 연출
 label transition_week1:
     window hide
 
@@ -34,6 +40,7 @@ label transition_week1:
     window show
     return
 
+# 1 -> 2주차 연출
 label transition_week2:
     window hide
 
@@ -44,6 +51,7 @@ label transition_week2:
     window show
     return
 
+# 2 -> 3주차 연출
 label transition_week3:
     window hide
 

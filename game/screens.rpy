@@ -259,12 +259,17 @@ style choice_button is default:
     background "gui/selection_box_nonselect.png"
     hover_background "gui/selection_box_select.png"
     xsize 950
-    ysize 90
+    yminimum 90
+
+    left_padding 70
+    right_padding 30
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
-    xalign 0.1
+    xsize 1333
+    xalign 0.0
     yalign 0.5
+    text_align 0.0
 
 
 ## Quick Menu 스크린 ##############################################################

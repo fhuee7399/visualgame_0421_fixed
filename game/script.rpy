@@ -467,6 +467,7 @@ label pastevent1:
     show junsung_sil
     hide junsung_sil
     "야! 기다려봐! 잠깐만!"
+    hide dim_past
 jump transition_week1
 
 

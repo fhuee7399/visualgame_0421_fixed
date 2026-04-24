@@ -134,7 +134,7 @@ define gui.dialogue_xpos = 402
 define gui.dialogue_ypos = 75
 
 ## 픽셀값에서 대사의 최대 너비입니다.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1430
 
 ## 대사 글자의 수평 정렬입니다. 이것은 0.0으로 좌측 정렬, 0.5로 중앙, 그리고 1.0
 ## 으로 우측 정렬이 될 수 있습니다.

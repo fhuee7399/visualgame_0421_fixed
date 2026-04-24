@@ -171,8 +171,9 @@ label hospital_pro:
     show seojin_smile_pri
     j "서진씨?"
     show seojin_emotionless_bui
-    d "네네 알겠어요. 원장님. 일단 상담실에 가서 이야기 하죠?"
     hide seojin_emotionless_bui
+    d "네네 알겠어요. 원장님. 일단 상담실에 가서 이야기 하죠?"
+    
     # 백그라운드 상담실
     scene bg_counsel_day
     show seojin_emotionless_bui
@@ -215,7 +216,7 @@ label hospital_pro:
     d "그리고 약간의 우울증과 대인기피증의 증상을 보였어요."
     show seojin_emotionless_bui
     j "그렇군요. 서진씨가 상담하셨을 땐 어떤 느낌이였나요?"
-    show seojin_sad_bui
+    show seojin_sad_pri
     d "음, 그렇네요… 조금 무반응을 하시는 경우가 많았던 거 같아요."
     show seojin_sad_bui
     d "대답을 해주셔도 단답형이셨고.."

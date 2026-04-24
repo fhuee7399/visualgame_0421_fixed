@@ -9,10 +9,17 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define j = Character("재우")
-define h = Character("하은")
-define d = Character("서진")
-define p = Character("준성")
+define j = Character("재우", show_box_kind="jaeu")
+define j_hidden = Character("???", kind=j)
+
+define h = Character("하은", show_box_kind="haeun")
+define h_hidden = Character("???", kind=h)
+
+define d = Character("서진", show_box_kind="doctor")
+define d_hidden = Character("???", kind=d)
+
+define p = Character("준성", show_box_kind="junsung")
+define p_hidden = Character("???", kind=p)
 
 # 연출 메서드입니다.
 

@@ -93,15 +93,15 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen say(who, what):
+screen say(who, what, box_kind=None):
 
-    if who == "재우":
+    if box_kind == "jaeu":
         $ bg = "gui/dialogue_box_jaeu.png"
-    elif who == "하은":
+    elif box_kind == "haeun":
         $ bg = "gui/dialogue_box_haeun.png"
-    elif who == "서진":
+    elif box_kind == "doctor":
         $ bg = "gui/dialogue_box_doctor.png"
-    elif who == "준성":
+    elif box_kind == "junsung":
         $ bg = "gui/dialogue_box_junsung.png"
     else:
         $ bg = "gui/dialogue_box_system.png"

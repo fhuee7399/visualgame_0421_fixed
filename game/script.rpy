@@ -9,10 +9,17 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define j = Character("재우")
-define h = Character("하은")
-define d = Character("서진")
-define p = Character("준성")
+define j = Character("재우", show_box_kind="jaeu")
+define j_hidden = Character("???", kind=j)
+
+define h = Character("하은", show_box_kind="haeun")
+define h_hidden = Character("???", kind=h)
+
+define d = Character("서진", show_box_kind="doctor")
+define d_hidden = Character("???", kind=d)
+
+define p = Character("준성", show_box_kind="junsung")
+define p_hidden = Character("???", kind=p)
 
 # 연출 메서드입니다.
 
@@ -49,6 +56,9 @@ label transition_week3:
 
 # 여기에서부터 게임이 시작합니다.
 label start:
+    jump week01_start
+    return
+
 # 과거회상_프롤로그
     scene bg_park_day
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
@@ -98,8 +108,7 @@ label bus_pro:
     "때마침 버스가 병원에 서게 된다."
     j "드디어!"
     "재우는 빠르게 버스에서 내려 병원으로 향한다."
-# jump hospital_pro
-jump week01_start
+jump hospital_pro
 
 label taxi_pro:
     scene bg_taxi

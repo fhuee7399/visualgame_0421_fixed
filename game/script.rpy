@@ -361,7 +361,7 @@ label hospital_pro:
                 show haeun_question
                 hide haeun_question
                 "재우는 하고 싶은 말을 하고 얼굴이 붉어진 것을 느낀다."
-                show haeun_
+                # 하은 happy 예정 
                 h "선생님은 솔직하신 분이시군요."
 
                 h "말해드릴게요."
@@ -371,52 +371,61 @@ label hospital_pro:
                 h "우울감에서 벗어나서 자유로워지고 싶어요."
 
                 h "우울한 이유를 몰라요. 그걸 알고 싶어요."
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 j "대답하시기 힘드셨을 텐데 이야기해주셔서 감사합니다."
                 jump firstmeeting_pro
 
         "의사니까요. 저는 하은씨를 도와드리고 싶어요.":
+                hide haeun_sad
+                show haeun_emotionless
                 h "감사합니다. 그냥 우울했어요."
-
+                show haeun_emotionless
                 j "그 이유를 알고 계신가요?"
-
+                show haeun_emotionless
                 h "몰라요. 그걸 알려주세요."
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 j "고마워요."
                 jump firstmeeting_pro
 
         "죄송합니다. 그래도 저는 알아야 할 의무가 있어요.":
+                show haeun_sad
+                hide haeun_sad 
                 h "의무니까 알고 싶으신 건가요?"
-
+                show haeun_emotionless
                 j "너무 말이 강했던 거 같네요. 하지만 저도 하은씨를 돕고 싶어요."
-
+                show haeun_emotionless
                 h "뭔가 우울했어요. 이유는 모르겠네요."
-
+                show haeun_emotionless
                 j "그 이유를 알고 싶어서 오신 건가요?"
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 h "네."
                 jump firstmeeting_pro
 
 label firstmeeting_pro:
     scene bg_counsel_day
+    show haeun_emotionless
     j "시간이 된 거 같네요."
-
+    show haeun_emotionless
     h "그렇네요."
-
+    show haeun_emotionless
     j "다음 상담 시간은 몇 시로 할까요? 지금 시간처럼 할까요?"
-
+    show haeun_emotionless
     h "지금 시간으로 할게요."
-
+    show haeun_emotionless
     j "네, 알겠습니다."
-
+    show haeun_emotionless
     j "오늘 상담 고생하셨어요."
-
+    show haeun_emotionless
     h "네."
-
+    show haeun_emotionless
     "두 명은 상담실에서 같이 나왔다."
-
+    show haeun_emotionless
     "재우는 하은이가 엘리베이터를 타고 나가는 모습을 보면서 손을 흔들며 인사한다."
-
+    show haeun_emotionless
+    hide haeun_emotionless
     "하은이는 재우의 인사를 무시한 채 내려갔다."
 
     j "휴, 생각보다 힘들었다."
@@ -446,17 +455,19 @@ label pastevent1:
     "지지직..."
 
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
-
+    show haeun_sil
+    hide haeun_sil
     "쫓아오지 마!!!"
-
+    show junsung_sil
+    hide junsung_sil
     "잠깐만! 내 말 좀 들어봐!"
-
+    show haeun_sil
+    hide haeun_sil
     "싫어!"
-
+    show junsung_sil
+    hide junsung_sil
     "야! 기다려봐! 잠깐만!"
-
-    "지지직..."
-return
+jump transition_week1
 
 
 

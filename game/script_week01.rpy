@@ -341,28 +341,24 @@ label past_flashback_2:
     scene bg_class_day
     show dim_past
     "남자 아이와 여자 아이가 싸우는 듯한 소리가 들린다."
-    show haeun_sil
+    show haeun_sil as actor
     h_hidden "너무한거 아니야?"
-    hide haeun_sil
-    show junsung_sil
+    show junsung_sil as actor
     p_hidden "잠깐만 기다려. 오해하고 있는 거 같아."
-    hide junsung_sil
-    show haeun_sil
+    show haeun_sil as actor
     h_hidden "넌 \%\$\#\$는 친구도 아니야?"
-    hide haeun_sil
-    show junsung_sil
+    show junsung_sil as actor
     p_hidden "그런게 아니야. 난 그저..."
-    hide junsung_sil
-    show haeun_sil
+    show haeun_sil as actor
     h_hidden "어떻게 그렇게 중요한 걸 소중한 친구에게 말하지 않을 수가 있어?"
     h_hidden "내가 뭘 오해 하고 있는 건데!"
     h_hidden "넌 친구도 아니야."
-    hide haeun_sil
+    hide actor
     "남자아이가 여자아이를 붙잡는다."
-    show haeun_sil
+    show haeun_sil as actor
     "여자아이가 남자아이를 뿌리치고 달려나간다."
     h_hidden "붙잡지마! 그냥 내 앞에서 사라져!"
-    hide haeun_sil
+    hide actor
     "남자아이가 여자아이를 뒤따라 달린다."
     hide dim_past
     jump week02_start

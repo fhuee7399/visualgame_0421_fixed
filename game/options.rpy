@@ -139,7 +139,10 @@ default preferences.afm_time = 15
 ## 이것은 일반적으로 변경해서는 안 되며, 항상 표현형식이 아닌 정확한 문자열이어
 ## 야 합니다.
 
-define config.save_directory = "visualgame_0421_fixed-1776749146"
+# define config.save_directory = "visualgame_0421_fixed-1776749146"
+
+## 버전 업 할 때마다 폴더 이름도 변경해야 함. 안 그러면 기존 세이브 파일 덮어씌워짐.
+define config.save_directory = "visualgame_v3_5_0425"
 
 
 ## Icon ########################################################################

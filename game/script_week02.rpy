@@ -102,7 +102,7 @@ label talk_with_seojin:
 
     d "네, 원장님."
 
-    jump label talk_with_haeun1
+    jump talk_with_haeun1
 
 label talk_with_haeun1:
     scene bg_counsel_day
@@ -206,8 +206,8 @@ label talk_with_haeun1:
 
     menu:
         h "대답해 주세요."
-        hide actor
-        "저희 어머니를 사랑합니다.":
+
+       "저희 어머니를 사랑합니다.":
         show haeun_question as actor
         j "저희 어머니를 사랑합니다."
         h "...선생님?"
@@ -280,8 +280,8 @@ label talk_with_haeun2:
 
     menu:
         j "(이래도 되는 걸까?)"
-        hide actor
-        "고소가 무서워 서진이를 불러 대신 안심시킨다.":
+       
+       "고소가 무서워 서진이를 불러 대신 안심시킨다.":
         show haeun_sad as actor
         j "(잠깐만... 고소당하는 거 아니야?)"
         j "안 됩니다."

@@ -93,20 +93,38 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
-screen say(who, what):
+# 대사 흔들림 트랜지션
+# 변수
+default dialogue_shake_on = False
+# 트랜지션
+transform dialogue_shake:
+    xoffset 0
+    linear 0.03 xoffset -8
+    linear 0.03 xoffset 8
+    linear 0.03 xoffset -6
+    linear 0.03 xoffset 6
+    linear 0.03 xoffset 0
 
-    if who == "재우":
+screen say(who, what, box_kind=None):
+
+    if box_kind == "jaeu":
         $ bg = "gui/dialogue_box_jaeu.png"
-    elif who == "하은":
+    elif box_kind == "haeun":
         $ bg = "gui/dialogue_box_haeun.png"
-    elif who == "서진":
+    elif box_kind == "doctor":
         $ bg = "gui/dialogue_box_doctor.png"
-    elif who == "준성":
+    elif box_kind == "junsung":
         $ bg = "gui/dialogue_box_junsung.png"
-    else:
+    elif box_kind == "system":
         $ bg = "gui/dialogue_box_system.png"
+    else:
+        $ bg = "gui/dialogue_box_system_removed_name.png"
 
     window:
+        # 변수가 True일 때 대사 흔들림 트랜지션 적용
+        if dialogue_shake_on:
+            at dialogue_shake
+
         background bg
         xalign 0.5
         yalign 0.88

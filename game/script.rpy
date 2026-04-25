@@ -9,14 +9,27 @@ default saw_date_event = False
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
-define j = Character("재우")
-define h = Character("하은")
-define d = Character("서진")
-define p = Character("준성")
+# 재우
+define j = Character("재우", show_box_kind="jaeu", what_slow_cps=20)
+define j_hidden = Character("???", kind=j)
 
-# 연출 메서드입니다.
+# 하은
+define h = Character("하은", show_box_kind="haeun", what_slow_cps=20)
+define h_hidden = Character("???", kind=h)
+
+# 서진
+define d = Character("서진", show_box_kind="doctor", what_slow_cps=20)
+define d_hidden = Character("???", kind=d)
+
+# 준성
+define p = Character("준성", show_box_kind="junsung", what_slow_cps=20)
+define p_hidden = Character("???", kind=p)
+
+# 시스템
+define sys = Character(show_box_kind="system")
 
 # 전환 애니메이션 출력
+# 0 -> 1주차 연출
 label transition_week1:
     window hide
 
@@ -27,6 +40,7 @@ label transition_week1:
     window show
     return
 
+# 1 -> 2주차 연출
 label transition_week2:
     window hide
 
@@ -37,6 +51,7 @@ label transition_week2:
     window show
     return
 
+# 2 -> 3주차 연출
 label transition_week3:
     window hide
 
@@ -53,11 +68,13 @@ label start:
     scene bg_park_day
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
     show junsung_sil
-    "늦게 온 사람이 음료수 사기."
+    p_hidden "늦게 온 사람이 음료수 사기!"
+    hide junsung_sil
     show haeun_sil
-    "야! 먼저 뛰면 어떡해."
+    j_hidden "야! 먼저 뛰면 어떡해."
+    show haeun_sil
     "나의 뒤엔 여자 아이 한명이 따라오고 있다."
-    "잠깐만 같이 가."
+    h_hidden "잠깐만 같이 가."
 
 # 재우파트_프롤로그
     scene bg_house_day
@@ -91,15 +108,14 @@ label bus_pro:
     "출근 시간의 버스 답게 많은 사람들이 타고 있다."
     "재우는 수많은 사람들에 끼이게 되었다."
     j "어우 내 병원 가는 것도 이렇게 고생해야 돼?"
-    "누군가가 의도치 않게 재우의 명치를 친다."
+    "누군가가 의도치 않게 재우의 명치를 친다." with vpunch
     j "어억!!.."
     j "팔꿈치로 명치를 맞다니… 이래서 출근시간 버스는 지옥이라는 건가?"
     j "아프다… 언제 도착하지?"
     "때마침 버스가 병원에 서게 된다."
     j "드디어!"
     "재우는 빠르게 버스에서 내려 병원으로 향한다."
-# jump hospital_pro
-jump week01_start
+jump hospital_pro
 
 label taxi_pro:
     scene bg_taxi
@@ -136,92 +152,101 @@ jump hospital_pro
 
 label hospital_pro:
     scene bg_hospital
+    show seojin_emotionless
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
+    show seojin_emotionless
+    hide seojin_emotionless
     j "뭐야, 먼저 왔네? 지하철 공사 때문에 늦을 줄 알았더니."
-
+    show seojin_smile
     d "난 자차로 왔지, 우리 원장님께선 차가 없던가? 하하"
-
+    show seojin_smile
     j "아침부터 활기차네… 부럽다."
-
+    show seojin_smile
     d "근데 너는 아직도 칠칠 맞게 옷에 커피를 흘려?"
-
+    show seojin_smile
     "재우는 옷에 커피가 묻었는지 확인한다."
-
+    show seojin_smile
     j "야! 너 진짜?"
-
-    d "야가 아니라 누나 해봐 누나."
-
+    show seojin_smile
+    d "'야'가 아니라 누나 해봐 누나."
+    show seojin_smile
     "여성의 이름은 윤서진, 재우보다 1살 연상이지만 재우의 대학교 시절 친구이자 같은 대학 병원의 동료로 현재는 재우의 병원에서 일하고 있다."
-
+    show seojin_smile
     j "서진씨, 예약하신 분 오실 시간이 되지 않았나요?"
-
+    show seojin_smile
     d "원장님은 불리하실 때 꼭 환자 얘기 하시네요?"
-
+    show seojin_smile
+    hide seojin_smile
     j "서진씨?"
-
+    show seojin_emotionless
+    hide seojin_emotionless
     d "네네 알겠어요. 원장님. 일단 상담실에 가서 이야기 하죠?"
-
+    
     # 백그라운드 상담실
     scene bg_counsel_day
+    show seojin_emotionless
     "서진은 머리를 묶고, 재우와 상담실로 이동해 이야기를 이어간다."
-
+    show seojin_emotionless
     "서진은 머리를 묶고 차트를 가져와 브리핑을 시작한다."
-
+    show seojin_emotionless
     d "아침에 오시는 분들은 여성분 한 분, 남성분 한 분, 총 2분이네요."
-
+    show seojin_emotionless
     j "이 남성분은 저번에 오셨던 분이네요. 서진씨 담당이였나요?"
-
+    show seojin_emotionless
     d "네, 제가 맡을 거 같아요."
-
+    show seojin_emotionless
     d "여성분 쪽은 원래 제가 주치의를 맡고 있던 환자인데 이 분을 원장님이 맡아주세요."
-
+    show seojin_emotionless
     j "네, 그럼 여성분에 대해 브리핑 해주세요."
-
+    show seojin_emotionless
     d "이 분 같은 경우 조금 특이케이스이신 거 같아요."
-
+    show seojin_emotionless
     j "어떤 점에서요?"
-
+    show seojin_emotionless
     d "보통의 환자들은 대부분 틀리더라도 원인을 지목하시는데 이 분은 모르겠다고 하시더라고요."
-
+    show seojin_emotionless 
     d "아예 원인 자체를 잊은 거 같아요. 아무래도 기억장애라고 생각돼요."
-
+    show seojin_emotionless
     j "해리성 기억장애가 의심되는 거 같네요? 정신적으로 큰 충격을 받게 될 때 당시의 기억을 자기방어의 수단으로 잊어버리는 정신 질환이요."
-
+    show seojin_emotionless
     d "네, 저도 그 질환을 의심하고 있어요."
-
+    show seojin_emotionless
     d "처음에 원인의 이유를 모른다고 하셨을 때 다른 환자들처럼 둘러대시는 줄 알았는데"
-
+    show seojin_emotionless
     d "몇 번의 질문에 대해서 답을 하는 모습을 보고 정말로 기억을 잊은 거 같으셨어요."
-
+    show seojin_emotionless
     j "근데 그럼 이분이 내원하신 이유는 무엇 때문이라고 하셨나요?"
-
+    show seojin_emotionless
     d "원인 모를 답답함? 그런 게 있다고 하시더라고요."
-
+    show seojin_emotionless
     j "과거의 기억에서 감정만 그대로 남아 있을 수 있겠네요."
-
+    show seojin_emotionless
     d "그리고 약간의 우울증과 대인기피증의 증상을 보였어요."
-
+    show seojin_emotionless
+    hide seojin_emotionless
     j "그렇군요. 서진씨가 상담하셨을 땐 어떤 느낌이였나요?"
-
+    show seojin_sad
     d "음, 그렇네요… 조금 무반응을 하시는 경우가 많았던 거 같아요."
-
+    show seojin_sad
+    hide seojin_sad
     d "대답을 해주셔도 단답형이셨고.."
-
+    show seojin_smile
     j "참고해서 상담 진행 해볼게요. 여성분 성함은 어떻게 되시죠?"
-
+    show seojin_smile
     d "\"이하은\"이라고 하셔요. 동갑이신 거 같은데 반하시면 안 되는 거 아시죠?"
-
+    show seojin_smile
     j "서진씨, 걱정마세요. 저는 서진씨처럼 이상한 로맨스 영화 안 보니까요."
-
+    show seojin_smile
     d "그게 무슨 말이죠? 원장님?"
-
+    show seojin_smile
     j "아니에요. 서진씨도 준비하셔야죠."
-
+    show seojin_smile
     d "마음의 준비 하셔야 할 거예요. 제가 봐도 이쁘더라고요."
-
+    show seojin_smile
     j "걱정도 많으시다. 제가 그럴 사람으로 보여요?"
-
-    d "네."
+    show seojin_smile
+    hide seojin_smile
+    d "네." 
 
     "재우를 놀리며 서진이 상담실을 빠져나간다."
 
@@ -265,137 +290,158 @@ label hospital_pro:
 
     j "이하은씨 들어오세요."
     #하은_첫_상담
+    show haeun_emotionless
     "하은이 상담실에 들어오자 백발과 다르게 붉은 눈이 눈에 들어온다."
-
+    show haeun_emotionless
     j "안녕하세요? (어디서 본 거 같은데)"
-
+    show haeun_emotionless
     j "여기 의자에 앉으시죠."
-
+    show haeun_emotionless
     "하은이 의자에 앉았다."
-
+    show haeun_emotionless
     j "안녕하세요. 하은씨, 저는 오늘부터 하은씨의 상담을 맡게 된 김재우라고 합니다."
-
+    show haeun_emotionless
     h "전에 상담하신 분은요?"
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "그분은 다른 업무가 생기셔서요. 아무래도 검진만 맡으실 거 같아요."
-
+    show haeun_mad
     h "거짓말. 날 피하려고 핑계 대는 거지."
-
+    show haeun_mad
     "서진의 문진표와 같이 하은은 잘 협조하지 않는 성격인 듯 하다."
-
+    show haeun_mad
     "하지만 재우는 노련하게 상담을 이어간다."
-
+    show haeun_mad
+    hide haeun_mad
     j "정말이에요, 서진 선생님이 일이 많아지셔서 제가 하은씨의 상담을 맡게 된 거예요."
-
+    show haeun_question
     h "정말요?"
-
+    show haeun_question
+    hide haeun_question
     j "그럼요. 하은씨가 싫어서가 아니라 서진 선생님이 바쁘셔서 그런 거예요."
-
+    show haeun_emotionless
     h "믿어드릴게요."
-
+    show haeun_emotionless
     j "(휴, 넘어간 건가?)"
-
+    show haeun_emotionless
     j "그럼 소개는 여기까지 하고 이제 상담을 시작할게요."
-
+    show haeun_emotionless
     "재우는 준비했던 질문들로 편안한 분위기를 구성하려 한다."
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "오늘 지하철 공사 때문에 오기 불편하셨을 거 같아요. 어떤 방법으로 오셨나요?"
-
+    show haeun_question
     h "그게 무슨 의미가 있죠?"
-
+    show haeun_question
+    hide haeun_question
     j "순수하게 궁금해서요. 저는 보통 지하철을 타고 다니거든요."
-
+    show haeun_emotionless
     j "그런데 오늘 공사를 한다고 해서 다른 방식으로 왔거든요."
-
+    show haeun_emotionless
     h "그게 저와의 상담에 무슨 도움이 되는지 모르겠네요."
-
+    show haeun_emotionless
     "예상은 했으나 더 철벽 같은 대답이 돌아왔다."
-
+    show haeun_emotionless
     j "그럼 좀 더 도움이 될 만한 질문을 할게요."
-
+    show haeun_emotionless
     h "네, 그러시죠."
-
+    show haeun_emotionless
     j "서진씨한테 듣기론 이유 모를 우울감 때문에 오신 건가요?"
-
+    show haeun_emotionless
     h "맞는데요?"
-
+    show haeun_emotionless
+    hide haeun_emotionless
     j "혹시 이것 이외에 따로 오시게 된 계기가 있나요? 심적인 변화나 다른 이유 같은 거요."
-
+    show haeun_sad
     h "말하기 싫어요."
-
+    show haeun_sad
     "재우는 하은의 반응에 개인적인 물음을 시도해 본다."
-
+    show haeun_sad
     j "그래도 얘기해주시면 안 될까요?"
-
+    show haeun_sad
     j "어떤 이유로 그런 아픔을 가지셨는지 알아야 할 거 같아요."
-
+    show haeun_sad
     j "(너무 공격적으로 물어본 걸까?)"
+    show haeun_sad
     menu:
         h "왜 그렇게 날 도와주려는 거야?"
         "모르겠어요. 하지만 하은씨를 볼 때 마다 도와주고 싶다는 생각이 들어요.":
+                hide haeun_sad
+                show haeun_question
                 j "저도 왜 그랬는지는 모르겠지만"
-
+                show haeun_question
                 j "하은씨를 볼 때마다 저도 뭔가 모를 감정이 떠올라요."
-
+                show haeun_question
                 j "하은씨는 이 감정이 우울감이신 거니까... 하은씨를 더욱 도와드리고 싶네요."
-
+                show haeun_question
+                hide haeun_question
                 "재우는 하고 싶은 말을 하고 얼굴이 붉어진 것을 느낀다."
-
+                show haeun_happy 
                 h "선생님은 솔직하신 분이시군요."
-
+                show haeun_happy
                 h "말해드릴게요."
-
+                show haeun_happy
                 j "고마워요."
-
+                show haeun_happy
                 h "우울감에서 벗어나서 자유로워지고 싶어요."
-
+                show haeun_happy
+                hide haeun_happy
                 h "우울한 이유를 몰라요. 그걸 알고 싶어요."
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 j "대답하시기 힘드셨을 텐데 이야기해주셔서 감사합니다."
                 jump firstmeeting_pro
 
         "의사니까요. 저는 하은씨를 도와드리고 싶어요.":
+                hide haeun_sad
+                show haeun_emotionless
                 h "감사합니다. 그냥 우울했어요."
-
+                show haeun_emotionless
                 j "그 이유를 알고 계신가요?"
-
+                show haeun_emotionless
                 h "몰라요. 그걸 알려주세요."
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 j "고마워요."
                 jump firstmeeting_pro
 
         "죄송합니다. 그래도 저는 알아야 할 의무가 있어요.":
+                show haeun_sad
+                hide haeun_sad 
                 h "의무니까 알고 싶으신 건가요?"
-
+                show haeun_emotionless
                 j "너무 말이 강했던 거 같네요. 하지만 저도 하은씨를 돕고 싶어요."
-
+                show haeun_emotionless
                 h "뭔가 우울했어요. 이유는 모르겠네요."
-
+                show haeun_emotionless
                 j "그 이유를 알고 싶어서 오신 건가요?"
-
+                show haeun_emotionless
+                hide haeun_emotionless
                 h "네."
                 jump firstmeeting_pro
 
 label firstmeeting_pro:
     scene bg_counsel_day
+    show haeun_emotionless
     j "시간이 된 거 같네요."
-
+    show haeun_emotionless
     h "그렇네요."
-
+    show haeun_emotionless
     j "다음 상담 시간은 몇 시로 할까요? 지금 시간처럼 할까요?"
-
+    show haeun_emotionless
     h "지금 시간으로 할게요."
-
+    show haeun_emotionless
     j "네, 알겠습니다."
-
+    show haeun_emotionless
     j "오늘 상담 고생하셨어요."
-
+    show haeun_emotionless
     h "네."
-
+    show haeun_emotionless
     "두 명은 상담실에서 같이 나왔다."
-
+    show haeun_emotionless
     "재우는 하은이가 엘리베이터를 타고 나가는 모습을 보면서 손을 흔들며 인사한다."
-
+    show haeun_emotionless
+    hide haeun_emotionless
     "하은이는 재우의 인사를 무시한 채 내려갔다."
 
     j "휴, 생각보다 힘들었다."
@@ -425,200 +471,21 @@ label pastevent1:
     "지지직..."
 
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
-
-    "쫓아오지 마!!!"
-
-    "잠깐만! 내 말 좀 들어봐!"
-
-    "싫어!"
-
-    "야! 기다려봐! 잠깐만!"
-
-    "지지직..."
-return
-
-
-
-jump week1
-
-label week1:
-    $ affection = 0
-
-    "1주차 시작"
-
-h "나는 귀여워?"
-
-menu:
-    "1.응 귀여워":
-        $ affection += 2
-        $ expaffection += 2
-        h "우와 기뻐"
-
-    "2.그럭저럭":
-        $ affection += 1
-        $ expaffection += 1
-        h "너무해"
-
-    "3.아니 전혀":
-        $ affection += 0
-        $ expaffection += 0
-        h "흠"
-
-h "귀여워어어?"
-
-menu:
-    "1.응 귀여워":
-        $ affection += 2
-        $ expaffection += 2
-        h "우와 기뻐"
-
-    "2.그럭저럭":
-        $ affection += 1
-        $ expaffection += 1
-        h "너무해"
-
-    "3.아니 전혀":
-        $ affection += 0
-        $ expaffection += 0
-        h "흠"
-    
-if affection >= 2:
-        "회상 1 해금!"
-
-        jump week1feedback
-
-
-if affection < 2:
-
-    jump week1feedback
-
-label week1feedback:
-if affection <= 1:
-    j "낮은 피드백"
-
-
-elif 1 < affection < 4:
-    j "중간 피드백"
-
-
-else:
-    j "높은 피드백"
-
-jump week2
-
-label week2:
-    $ affection = 0
-
-    "2주차 시작"
-
-    d "나는 멋있어?"
-
-menu:
-    "1.응":
-        $ affection += 2
-        d "우와 기뻐"
-
-    "2.뭐 그냥 그래":
-        $ affection += 1
-        d "너무해"
-
-    "3.놉":
-        $ affection += 0
-        d "흠"
-
-j "너를 좋아하는 것 같아."
-
-menu:
-    "1.응":
-        $ affection += 2
-        j "우와 기뻐"
-
-    "2.뭐 그냥 그래":
-        $ affection += 1
-        j "너무해"
-
-    "3.놉":
-        $ affection += 0
-        j "흠"
-    
-if affection < 3:
-        jump bad_ending
-
-if affection >= 5:
-        "회상 2 해금"
-
-if affection >= 7:
-        $ saw_date_event = True
-        jump date_event
-
-jump week3
-
-label week3:
-    $ affection = 0
-
-    "3주차 시작"
-
-    h "안녕"
-
-menu:
-    "1.응 반가워":
-        $ affection += 2
-        h "우와 기뻐"
-
-    "2.응":
-        $ affection += 1
-        h "너무해"
-
-    "3.안 반가움":
-        $ affection += 0
-        h "흠"
-
-menu:
-    "1.응 반가워":
-        $ affection += 2
-        d "우와 기뻐"
-
-    "2.응":
-        $ affection += 1
-        d "너무해"
-
-    "3.안 반가움":
-        $ affection += 0
-        d "흠"
-    
-if affection >= 9:
-    "회상 3 해금"
-
-jump final_branch
-
-if affection < 9:
-    jump final_branch
-
-label final_branch:
-
-    if affection < 5:
-        jump bad_ending
-
-    if not saw_date_event:
-        jump normal_ending
-
-    if final_piece:
-        jump true_ending
-
-    jump good_ending
-
-label bad_ending:
-    "배드 엔딩"
-    return
-
-label normal_ending:
-    "노멀 엔딩"
-    return
-
-label good_ending:
-    "굿 엔딩"
-    return
-
-label true_ending:
-    "트루 엔딩"
-    return
+    show haeun_sil
+    hide haeun_sil
+    $ dialogue_shake_on = True
+    h_hidden "쫓아오지 마!!! \%\$\#\$"
+    $ dialogue_shake_on = False
+    show junsung_sil
+    hide junsung_sil
+    p_hidden "잠깐만! \%\$\#\$ 내 말 좀 들어봐!"
+    show haeun_sil
+    hide haeun_sil
+    $ dialogue_shake_on = True
+    h_hidden "싫어!"
+    $ dialogue_shake_on = False
+    show junsung_sil
+    hide junsung_sil
+    p_hidden "야! 기다려봐! 잠깐만!"
+    hide dim_past
+    jump week01_start

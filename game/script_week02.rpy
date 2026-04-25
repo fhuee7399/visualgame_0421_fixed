@@ -4,6 +4,8 @@ label week02_start:
 
 label jaewoo_wakeup2:
     scene bg_house_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2jaewoo_wokeup.mp3" fadein 1.0
     "오전 7시의 알람이 울린다."
 
     j "뭔가가 이어지는 거 같아..."
@@ -15,6 +17,8 @@ label jaewoo_wakeup2:
     "재우는 출근 할 준비를 마치고 집을 나선다."
     # 출근길
     scene bg_street_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2go_to_work.mp3" fadein 1.0
     j "역시 출근길은 지하철이 최고야."
     j "오늘은 하은씨 상태가 나아졌으면 좋겠다."
 
@@ -24,6 +28,8 @@ label jaewoo_wakeup2:
 
 label talk_with_seojin:
     scene bg_hospital
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2talk_seojin_concern.mp3" fadein 1.0
     "병원에 출근하자마자 재우는 서진에게 손이 잡힌 채 상담실로 끌려간다."
     show seojin_emotionless as actor
     d "재우야 어떻게 한 거야?"
@@ -36,6 +42,8 @@ label talk_with_seojin:
     j "(설마 최악의 상황?)"
     hide actor
     show seojin_smile as actor
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2talk_seojin_happy.mp3" fadein 1.0
     d "어떻게 했길래 하은씨 상태가 좋아진 거야?"
 
     j "하은씨가?"
@@ -106,6 +114,8 @@ label talk_with_seojin:
 
 label talk_with_haeun1:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2counsel1.mp3" fadein 1.0
     show haeun_emotionless as actor
     "재우가 상담실로 이동해 상담 준비를 마칠 무렵 하은씨가 도착했다."
     hide actor
@@ -164,6 +174,8 @@ label talk_with_haeun1:
     "하은의 두 눈이 반짝이는 것 같다."
 
     j "슬슬 상담을 시작해 볼까요?"
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2counsel2.mp3" fadein 1.0
 
     h "네. 좋아요."
 
@@ -209,6 +221,8 @@ label talk_with_haeun1:
 
         "저희 어머니를 사랑합니다.":
             show haeun_question as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice1_1.mp3" fadein 1.0
             j "저희 어머니를 사랑합니다."
             h "...선생님?"
             j "네?"
@@ -220,6 +234,8 @@ label talk_with_haeun1:
 
         "저도 프라이버시가 있어요.":
             show haeun_sad as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice1_2.mp3" fadein 1.0
             j "저도 프라이버시가 있어요."
             hide actor
             show haeun_mad as actor
@@ -230,6 +246,8 @@ label talk_with_haeun1:
 
         "글쎄요... 중학교 때 있었던 거 같아요.":
             show haeun_sad as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice1_3.mp3" fadein 1.0
             j "글쎄요... 중학교 때 있었던 거 같아요."
             hide actor
             show haeun_emotionless as actor
@@ -249,6 +267,8 @@ label talk_with_haeun1:
 
 label talk_with_haeun2:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2counsel2.mp3" fadein 1.0
     show haeun_happy as actor
     j "이어서 상담을 진행해 볼까요?"
     hide actor
@@ -283,6 +303,8 @@ label talk_with_haeun2:
        
         "고소가 무서워 서진이를 불러 대신 안심시킨다.":
             show haeun_sad as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice2_1.mp3" fadein 1.0
             j "(잠깐만... 고소당하는 거 아니야?)"
             j "안 됩니다."
             h "...그러시겠죠."
@@ -291,6 +313,8 @@ label talk_with_haeun2:
 
         "하은의 손을 잡는다.":
             show haeun_sad as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice2_2.mp3" fadein 1.0
             j "(이래도 되는 걸까?)"
             "재우가 하은의 손을 잡는다."
             "하은의 신음 소리가 줄어든다."
@@ -300,6 +324,8 @@ label talk_with_haeun2:
 
         "하은을 멈춘다.":
             show haeun_sad as actor
+            stop music fadeout 1.0
+            play music "audio/bgm/week02/w2choice2_3.mp3" fadein 1.0
             j "(아무래도 신체 접촉은 좀 부담스럽지.)"
             j "하은님, 괜찮아요. 무리하지 않아도 돼요."
             h "그렇지만... 앞으로 조금 남은 것 같은데..."
@@ -309,6 +335,8 @@ label talk_with_haeun2:
     
 label talk_with_haeun3:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2counsel3.mp3" fadein 1.0
     show haeun_emotionless as actor
     h "선생님, 이제 괜찮아요..."
     hide actor
@@ -331,6 +359,8 @@ label talk_with_haeun3:
 
 label jaewoo_return_home:
     scene bg_street_night
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2jaewoo_return_home.mp3" fadein 1.0
     "재우도 마무리를 한 뒤 집으로 향하자 밤이 되었다."
 
     j "오늘도 수고했다, 나 자신."
@@ -345,6 +375,8 @@ label jaewoo_return_home:
 label past_event3:
     scene bg_street_afternoon
     show dim_past
+    stop music fadeout 1.0
+    play music "audio/bgm/week02/w2pastevent3.mp3" fadein 1.0
     "울면서 달리고 있는 여자아이의 실루엣이 보인다."
     show junsung_mad as actor
     p_hidden "멈춰! 이하은!"

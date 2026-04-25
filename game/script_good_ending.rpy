@@ -22,7 +22,7 @@ label week03_good_ending:
 
  "왜 숨이 막혔는지조차 기억나지 않았다."
  hide actor
- show haeun_cured_emotionless as actor
+ show haeun_cured_default as actor
  "아니, 기억하고 싶지 않은 마음이 기억 자체를 지워버린 것 같았다."
  hide actor
  show haeun_cured_happy as actor

@@ -360,4 +360,4 @@ label past_event3:
     h "준성아!!!"
     hide actor
     hide dim_past
-    jump week03_start
+    jump date_start

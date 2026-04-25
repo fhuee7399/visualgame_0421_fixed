@@ -421,4 +421,5 @@ label haeun_bad_ending:
     j "그렇구나..."
     "Bad Ending" with hpunch
     hide seojin_sad
+    stop music fadeout 1.0
     return

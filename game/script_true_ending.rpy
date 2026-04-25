@@ -68,11 +68,13 @@ label week03_true_ending:
     j "(알면서 그랬던 거구나. 하은이가 왜 화가 났는지, 하은이가 날 좋아하는 걸 알아서.)"
     j "(그래서 아무 말을 할 수가 없었구나.)"
     "재우는 그렇게 그냥 안고 있었다."
-    scene black
     hide actor
+    scene black with Fade(1.0, 2.0, 0.0)
+
     "시간이 지난 후"
     "둘은 어느새 연인 관계가 되었다."
-    scene bg_hall_lobby
+    
+    scene bg_hall_lobby with Fade(0.0, 0.0, 1.0)
     "몇 년 후, 결혼식이 열리게 되었다."
     "쏟아지는 환호 속에서 하은은 재우를 바라본다."
     h "앞으로 후회하며 살지 않을 거야."

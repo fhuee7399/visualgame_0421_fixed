@@ -5,7 +5,7 @@ label date_start:
 label date_wake_up:
     scene bg_house_day with Fade(0.0, 0.0, 1.0)
     stop music fadeout 1.0
-    play music "audio/bgm/date/jaewoo_wdate_wake_upake_up.mp3" fadein 1.0
+    play music "audio/bgm/date/date_wake_up.mp3" fadein 1.0
     "병원이 쉬는 날 오전 7시의 알람이 울린다."
     j "병원 쉬는 날이었구나... 오늘은 뭐 하지?"
     j "산책이나 할까? 운동을 안 한 지 너무 오래된 것 같아…"

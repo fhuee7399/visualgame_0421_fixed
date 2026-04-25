@@ -80,4 +80,5 @@ label week03_true_ending:
     "부부라는 이름으로 그들 앞에 펼쳐진 내일을 향해 나아가려 하고 있다."
     scene bg_ending_true
     h "사랑해ㅡ"
+    "True Ending" with hpunch
     return

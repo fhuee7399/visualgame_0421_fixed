@@ -349,7 +349,7 @@ label past_event3:
     show junsung_mad as actor
     p_hidden "멈춰! 이하은!"
     hide actor
-    show haeun_past_mad
+    show haeun_past_mad as actor
     "남자아이의 소리에 소녀(하은)가 멈춰 선다."
     hide actor
     show junsung_surprised as actor

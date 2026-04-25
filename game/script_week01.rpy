@@ -338,9 +338,9 @@ label haeun_counseling_wrap_up:
     "재우는 하은에게 손을 흔든다."
     h "네. 오늘 상담 감사합니다."
     j "(많이 나아지신 거 같아.)"
-    jump jaewoo_return_home
+    jump jaewoo_return_home_pro
 
-label jaewoo_return_home:
+label jaewoo_return_home_pro:
     scene bg_street_night
     stop music fadeout 1.0
     play music "audio/bgm/week01/jaewoo_return_home.mp3" fadein 1.0

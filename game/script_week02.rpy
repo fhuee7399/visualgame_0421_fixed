@@ -207,45 +207,45 @@ label talk_with_haeun1:
     menu:
         h "대답해 주세요."
 
-       "저희 어머니를 사랑합니다.":
-        show haeun_question as actor
-        j "저희 어머니를 사랑합니다."
-        h "...선생님?"
-        j "네?"
-        hide actor
-        show haeun_mad as actor
-        h "아니에요." 
-        hide actor
-        jump haeun_bad_ending
+        "저희 어머니를 사랑합니다.":
+            show haeun_question as actor
+            j "저희 어머니를 사랑합니다."
+            h "...선생님?"
+            j "네?"
+            hide actor
+            show haeun_mad as actor
+            h "아니에요." 
+            hide actor
+            jump haeun_bad_ending
 
         "저도 프라이버시가 있어요.":
-        show haeun_sad as actor
-        j "저도 프라이버시가 있어요."
-        hide actor
-        show haeun_mad as actor
-        h "...저랑 상담을 하고 있던 게 맞나요?"
-        j "죄송합니다."
-        hide actor
-        jump haeun_bad_ending
+            show haeun_sad as actor
+            j "저도 프라이버시가 있어요."
+            hide actor
+            show haeun_mad as actor
+            h "...저랑 상담을 하고 있던 게 맞나요?"
+            j "죄송합니다."
+            hide actor
+            jump haeun_bad_ending
 
         "글쎄요... 중학교 때 있었던 거 같아요.":
-        show haeun_sad as actor
-        j "글쎄요... 중학교 때 있었던 거 같아요."
-        hide actor
-        show haeun_emotionless as actor
-        h "더 이야기해 주실 수 있나요?"
-        j "네, 저도 정확하게는 기억나지 않지만..."
-        j "무언가 그 시절을 생각하면 '사랑이란 게 이런 게 아닐까?'라는 생각을 해요."
-        hide actor
-        show haeun_question as actor
-        h "선생님은 그게 사랑인지 어떻게 아시는 건가요?"
-        j "잘은 설명하지 못하겠지만..."
-        j "볼수록 더 보고 싶고, 생각할수록 더 생각나는 그런 게 아닐까요?"
-        hide actor 
-        show haeun_happy as actor
-        h "네... 어느 정도 알 것 같아요." 
-        hide actor
-        jump label talk_with_haeun2
+            show haeun_sad as actor
+            j "글쎄요... 중학교 때 있었던 거 같아요."
+            hide actor
+            show haeun_emotionless as actor
+            h "더 이야기해 주실 수 있나요?"
+            j "네, 저도 정확하게는 기억나지 않지만..."
+            j "무언가 그 시절을 생각하면 '사랑이란 게 이런 게 아닐까?'라는 생각을 해요."
+            hide actor
+            show haeun_question as actor
+            h "선생님은 그게 사랑인지 어떻게 아시는 건가요?"
+            j "잘은 설명하지 못하겠지만..."
+            j "볼수록 더 보고 싶고, 생각할수록 더 생각나는 그런 게 아닐까요?"
+            hide actor 
+            show haeun_happy as actor
+            h "네... 어느 정도 알 것 같아요." 
+            hide actor
+            jump talk_with_haeun2
 
 label talk_with_haeun2:
     scene bg_counsel_day
@@ -281,31 +281,31 @@ label talk_with_haeun2:
     menu:
         j "(이래도 되는 걸까?)"
        
-       "고소가 무서워 서진이를 불러 대신 안심시킨다.":
-        show haeun_sad as actor
-        j "(잠깐만... 고소당하는 거 아니야?)"
-        j "안 됩니다."
-        h "...그러시겠죠."
-        hide actor
-        jump haeun_bad_ending
+        "고소가 무서워 서진이를 불러 대신 안심시킨다.":
+            show haeun_sad as actor
+            j "(잠깐만... 고소당하는 거 아니야?)"
+            j "안 됩니다."
+            h "...그러시겠죠."
+            hide actor
+            jump haeun_bad_ending
 
         "하은의 손을 잡는다.":
-        show haeun_sad as actor
-        j "(이래도 되는 걸까?)"
-        "재우가 하은의 손을 잡는다."
-        "하은의 신음 소리가 줄어든다."
-        h "감사합니다..."
-        hide actor
-        jump talk_with_haeun3
+            show haeun_sad as actor
+            j "(이래도 되는 걸까?)"
+            "재우가 하은의 손을 잡는다."
+            "하은의 신음 소리가 줄어든다."
+            h "감사합니다..."
+            hide actor
+            jump talk_with_haeun3
 
         "하은을 멈춘다.":
-        show haeun_sad as actor
-        j "(아무래도 신체 접촉은 좀 부담스럽지.)"
-        j "하은님, 괜찮아요. 무리하지 않아도 돼요."
-        h "그렇지만... 앞으로 조금 남은 것 같은데..."
-        j "괜찮다니까요?"
-        hide actor
-        jump haeun_bad_ending
+            show haeun_sad as actor
+            j "(아무래도 신체 접촉은 좀 부담스럽지.)"
+            j "하은님, 괜찮아요. 무리하지 않아도 돼요."
+            h "그렇지만... 앞으로 조금 남은 것 같은데..."
+            j "괜찮다니까요?"
+            hide actor
+            jump haeun_bad_ending
     
 label talk_with_haeun3:
     scene bg_counsel_day

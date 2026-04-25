@@ -201,3 +201,12 @@ init python:
 ## 다.
 
 # define build.itch_project = "renpytom/test-project"
+
+
+## V로 보이스로더 사용하는 것을 금합니다.
+default preferences.self_voicing = False
+
+init python:
+    config.keymap["self_voicing"] = []
+    config.keymap["clipboard_voicing"] = []
+    config.keymap["debug_voicing"] = []

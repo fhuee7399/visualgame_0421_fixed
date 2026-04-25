@@ -15,6 +15,7 @@ label week02_start:
 jump jaewoo_wakeup2
 
 label jaewoo_wakeup2:
+scene bg_house_day
 "오전 7시의 알람이 울린다."
 
 j "뭔가가 이어지는 거 같아..."
@@ -24,7 +25,8 @@ j "하은씨랑 겹쳐 보이는 건 기분 탓일까?"
 j "출근 해야지..."
 
 "재우는 출근 할 준비를 마치고 집을 나선다."
-
+# 출근길
+scene bg_street_day
 j "역시 출근길은 지하철이 최고야."
 j "오늘은 하은씨 상태가 나아졌으면 좋겠다."
 
@@ -33,6 +35,7 @@ j "오늘은 하은씨 상태가 나아졌으면 좋겠다."
 jump talk_with_seojin
 
 label talk_with_seojin:
+scene bg_hospital
 "병원에 출근하자마자 재우는 서진에게 손이 잡힌 채 상담실로 끌려간다."
 show seojin_emotionless as actor
 d "재우야 어떻게 한 거야?"
@@ -114,6 +117,7 @@ d "네, 원장님."
 jump label talk_with_haeun1
 
 label talk_with_haeun1:
+scene bg_counsel_day
 show haeun_emotionless as actor
 "재우가 상담실로 이동해 상담 준비를 마칠 무렵 하은씨가 도착했다."
 hide actor
@@ -255,7 +259,8 @@ menu:
      hide actor
      jump label talk_with_haeun2
 
-label talk_with_haeun2
+label talk_with_haeun2:
+scene bg_counsel_day
 show haeun_happy as actor
 j "이어서 상담을 진행해 볼까요?"
 hide actor
@@ -315,6 +320,7 @@ menu:
     jump haeun_bad_ending
     
 label talk_with_haeun3:
+scene bg_counsel_day
 show haeun_emotionless as actor
 h "선생님, 이제 괜찮아요..."
 hide actor
@@ -326,7 +332,7 @@ h "다시 한번 감사합니다."
 j "수고하셨어요, 하은씨."
 
 h "선생님도요."
-
+scene bg_hospital
 "재우는 하은의 배웅을 나가 손을 흔든다."
 
 h "(손을 흔들며) 다음에 뵐게요, 선생님."
@@ -336,10 +342,11 @@ hide actor
 jump jaewoo_return_home
 
 label jaewoo_return_home:
+scene bg_street_night
 "재우도 마무리를 한 뒤 집으로 향하자 밤이 되었다."
 
 j "오늘도 수고했다, 나 자신."
-
+scene bg_house_night
 "재우는 집으로 돌아와 잘 준비를 마치고 잠자리에 든다."
 show haeun_happy as actor
 j "하은씨 보기 좋아져서 다행이다."
@@ -348,18 +355,21 @@ hide actor
 jump past_event3
 
 label past_event3:
+scene bg_street_afternoon
 show dim_past
 "울면서 달리고 있는 여자아이의 실루엣이 보인다."
 show junsung_mad as actor
 p_hidden "멈춰! 이하은!"
 hide actor
-
+show haeun_past_mad
 "남자아이의 소리에 소녀(하은)가 멈춰 선다."
-
+hide actor
+show junsung_surprised as actor
 p_hidden "안 돼!"
-
 "남자아이가 하은을 밀친다."
-
+hide actor
+show haeun_past_surprised as actor
 h "준성아!!!"
+hide actor
 hide dim_past
 jump week03_start

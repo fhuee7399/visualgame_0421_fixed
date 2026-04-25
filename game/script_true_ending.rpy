@@ -83,6 +83,11 @@ label week03_true_ending:
     "그렇게 어둠 속에 갇혀 있던 소녀와 방향을 잃었던 소년은 비로소 서로를 구원하게 되었고,"
     "부부라는 이름으로 그들 앞에 펼쳐진 내일을 향해 나아가려 하고 있다."
     scene bg_ending_true
+
+    window hide
+    pause 2.0
+    window show
+    
     h "사랑해ㅡ"
     "True Ending" with hpunch
     stop music fadeout 1.0

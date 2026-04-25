@@ -63,6 +63,11 @@ label week03_good_ending:
 
  "재우는 하은이 가져가야 했을 트라우마의 무게까지 자신이 떠맡은 듯한 찝찝함을 느꼈다."
  scene bg_ending_good
+
+ window hide
+ pause 2.0
+ window show
+
  j "파랑새는... 자신이 갇혀 있었다는 사실조차 잊어야 행복한 걸지도 모르겠네."
  
  "굿 엔딩"

@@ -334,4 +334,5 @@ label date_past_flashback_4:
     "친구들과의 기억은 사라진 상태로."
     "거짓된 기억이 덧씌워지는 것조차 모르는 상태로."
     hide dim_past
+    stop music fadeout 1.0
     jump week03_start

@@ -4,6 +4,8 @@ label week01_start:
 
 label jaewoo_wake_up:
     scene bg_house_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/jaewoo_wake_up.mp3" fadein 1.0
     "오전 7시에 맞춘 알람이 울린다."
     "꿈을 꾸던 재우가 깨어나게 되었고 자신이 꾼 꿈에 대해 생각한다."
     j "그 꿈은 뭐였지.. 어제랑 이어지는 건가?"
@@ -18,6 +20,8 @@ label jaewoo_wake_up:
 
 label street_day_commute:
     scene bg_street_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/street_day_commute.mp3" fadein 1.0
     "재우는 집 근처의 역으로 향한다."
     j "역시 출근은 지하철이야."
     j "공사는 가급적 안 했으면 좋겠네"
@@ -25,6 +29,8 @@ label street_day_commute:
 
 label meet_seojin:
     scene bg_hospital
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/meet_seojin.mp3" fadein 1.0
     show seojin_emotionless
     "병원에 도착하자 먼저 기다리던 서진이 보인다."
     hide seojin_emotionless
@@ -70,6 +76,8 @@ label meet_seojin:
 
 label haeun_counseling:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling.mp3" fadein 1.0
     "재우는 걱정과 두려움 속에서 하은이가 오길 기다리고 있다."
     j "설마 안 오시는 건 아니겠지?"
     j "30분 정도 지난거 같은데..."
@@ -169,6 +177,8 @@ label haeun_counseling:
 
 label haeun_counseling_memory_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_memory_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_sad
     j "어렸을 적 친구와 이별했던 적이 있어요."
@@ -188,6 +198,8 @@ label haeun_counseling_memory_answer:
 
 label haeun_counseling_seojin_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_seojin_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_emotionless
     j "서진 선생님이랑 힘든 일이 있었어요."
@@ -203,6 +215,8 @@ label haeun_counseling_seojin_answer:
 
 label haeun_counseling_refusal_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_refusal_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_emotionless
     j "죄송하지만 그 대답은 하기 힘들 거 같아요."
@@ -216,6 +230,8 @@ label haeun_counseling_refusal_answer:
 
 label haeun_counseling_part2:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_part2.mp3" fadein 1.0
     j "그럼 이제 저도 하은씨의 과거 이야기를 들을 수 있나요?"
     hide haeun_sad
     show haeun_emotionless
@@ -253,6 +269,8 @@ label haeun_counseling_part2:
 
 label haeun_counseling_part2_parents_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_part2_parents_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_sad
     j "...작년에 부모님이..."
@@ -277,6 +295,8 @@ label haeun_counseling_part2_parents_answer:
 
 label haeun_counseling_part2_celebrity_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_part2_celebrity_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_sad
     j "제가 존경하는 유명인이 최근에 돌아 가셨어요."
@@ -292,6 +312,8 @@ label haeun_counseling_part2_celebrity_answer:
 
 label haeun_counseling_part2_refusal_answer:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_part2_refusal_answer.mp3" fadein 1.0
     hide haeun_sad
     show haeun_sad
     j "죄송하지만 그 대답은 너무 민감해요."
@@ -306,6 +328,8 @@ label haeun_counseling_part2_refusal_answer:
 
 label haeun_counseling_wrap_up:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/haeun_counseling_wrap_up.mp3" fadein 1.0
     "하은과의 상담이 끝나고 재우는 하은이의 마중을 나간다."
     scene bg_hospital
     hide haeun_sad
@@ -318,6 +342,8 @@ label haeun_counseling_wrap_up:
 
 label jaewoo_return_home:
     scene bg_street_night
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/jaewoo_return_home.mp3" fadein 1.0
     hide haeun_happy
     j "너무 개인적인 이야기를 많이 한 걸까?"
     j "오늘은 오랜만에 토스트를 먹어야겠다."
@@ -339,6 +365,8 @@ label jaewoo_return_home:
 
 label past_flashback_2:
     scene bg_class_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week01/past_flashback_2.mp3" 
     show dim_past
     "남자 아이와 여자 아이가 싸우는 듯한 소리가 들린다."
     show haeun_sil as actor
@@ -366,6 +394,8 @@ label past_flashback_2:
 
 label haeun_bad_ending:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    # play music "audio/bgm/week01/haeun_bad_ending.mp3" 
     show haeun_emotionless
     "이후 몇번의 대화가 오간 후."
     h "수고하셨습니다."

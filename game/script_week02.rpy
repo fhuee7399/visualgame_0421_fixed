@@ -189,7 +189,7 @@ label talk_with_haeun1:
 
     h "저의 앞에 두 명의 남자아이들이 달려가는 것이 보여요."
     hide actor
-    show haeun_haeun_cured_sad as actor
+    show haeun_cured_sad as actor
     h "동시에 가슴이 먹먹거리면서 동시에 두근두근거리는 것 같아요."
 
     j "힘드시면 천천히 하셔도..."

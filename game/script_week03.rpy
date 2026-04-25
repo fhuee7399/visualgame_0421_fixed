@@ -7,6 +7,8 @@ label week03_start:
 
 label jaewoo_wake_up_week03:
     scene bg_house_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/jaewoo_wake_up_week03.mp3" fadein 1.0
     hide actor
     "오전 7시의 알람이 울리지만, 이미 재우는 깨어있었다."
     j "뭔가 이어진 거 같아."
@@ -20,6 +22,8 @@ label jaewoo_wake_up_week03:
 
 label commute_to_hospital_week03:
     scene bg_street_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/commute_to_hospital_week03.mp3" fadein 1.0
     hide actor
     "평소와 다름이 없는 지하철을 타고 병원으로 향한다."
     j "하은 씨와 무슨 대화를 나누게 될까?"
@@ -28,6 +32,8 @@ label commute_to_hospital_week03:
 
 label talk_with_seojin_week03:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/talk_with_seojin_week03.mp3" fadein 1.0
     hide actor
     "재우가 병원에 들어서자. 서진이 손을 흔들며 반긴다."
     show seojin_smile as actor
@@ -68,6 +74,8 @@ label talk_with_seojin_week03:
 
 label counseling_with_haeun_week03:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_week03.mp3" fadein 1.0
     hide actor
     "재우는 상담에 대해 생각하면서 멍하니 앉아 있다보니, 간호사 분이 하은씨가 왔다고 한다."
     j "(…왔구나)"
@@ -85,6 +93,8 @@ label counseling_with_haeun_week03:
     h "저도요. 얼마 만에 그렇게 재밌게 놀았는지 모를 정도였어요"
     j "(웃으면서 얘기하는 모습이 좋다. 근데 서진이 한 말이 자꾸 맴돈다. 하은씨가 나를 좋아하는 건지, 아니면 힘들 때 손 잡아준 사람을 좋아하는 건지. 그게 구분이 되어야 한다고)"
     show haeun_cured_default as actor
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_week03_trouma.mp3" fadein 1.0
     j "그럼 이제 트라우마에 대해 얘기해 봐도 될까요?"
     h "네, 지금이라면 할 수 있을 것 같아요."
     j "혹시 중학교가 어디였어요?"
@@ -109,6 +119,7 @@ label counseling_with_haeun_week03:
     h "트럭이 갑자기 달려왔고, 저는 피하지 못했어요"
     h "근데 누군가가 저를 밀어냈어요. 그리고 그 사람이…"
     menu:
+        stop music fadeout 1.0
         "하은의 말이 멈췄다. 재우는 서두르지 않고 기다렸다"
         "그 사람이 대신 치인 건가요?":
             $ week03_first_choice += 1
@@ -120,6 +131,8 @@ label counseling_with_haeun_week03:
 
 label counseling_with_haeun_first_choice_1:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_first_choice.mp3" fadein 1.0
     hide actor
     j "그 사람이… 대신 치인 건가요?"
     show haeun_cured_concerned as actor
@@ -127,29 +140,35 @@ label counseling_with_haeun_first_choice_1:
     show haeun_cured_sad as actor
     h "저를 구하려다가 그만…"
     j "(…뭔가 머릿속에서 스치는 게 있다. 공원. 트럭. 누군가를 밀어낸 사람. 왜 이게 낯설지가 않지)"
-    jump week03_row_92
+    jump counseling_with_haeun_02_week03
 
 label counseling_with_haeun_first_choice_2:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_first_choice.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "그 사람이 다쳤나요?"
     show haeun_cured_sad as actor
     h "…다친 게 아니에요"
     h "죽었어요. 저를 구하려다가"
     j "(…그 말이 예상보다 훨씬 크게 들어온다. 왜지)"
-    jump week03_row_92
+    jump counseling_with_haeun_02_week03
 
 label counseling_with_haeun_first_choice_3:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_first_choice.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "괜찮아요, 천천히 해도 돼요"
     show haeun_cured_sad as actor
     h "…그 사람이 대신 치였어요. 저를 구하려다가 죽었어요"
     j "(…말을 잇지 못한다. 이 얘기가 왜 이렇게 낯설지가 않은 거지)"
-    jump week03_row_92
+    jump counseling_with_haeun_02_week03
 
-label week03_row_92:
+label counseling_with_haeun_02_week03:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_02_week03.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "그 사람이 어떤 사람이었는지 기억해요?"
     h "저랑 사이가 좋지 않았어요. 근데 이상하게 싫지는 않았던 사람이에요"
@@ -158,6 +177,7 @@ label week03_row_92:
     h "…준. 준이 들어갔던 것 같아요"
     menu:
         j "(해외 갔다고 들었던 애. 언제 들었더라. 기억이 잘 안 난다)"
+        stop music fadeout 1.0
         "이준성?":
             $ week03_first_choice += 1
             jump counseling_with_haeun_second_choice_1
@@ -168,6 +188,8 @@ label week03_row_92:
 
 label counseling_with_haeun_second_choice_1:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_second_choice.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "이준성?"
     "그 이름을 입 밖에 내는 순간 재우의 머릿속에서 뭔가 툭 하고 끊어지는 느낌이 들었다"
@@ -176,27 +198,33 @@ label counseling_with_haeun_second_choice_1:
     h "근데 선생님, 어떻게 아셨어요? 제가 말씀드린 적 없는데요"
     j "(어떻게 알았지. 추측이 아니었다. 그냥 알고 있었다)"
     j "…저도 잘 모르겠어요. 그냥 나왔어요"
-    jump week03_row_114
+    jump counseling_with_haeun_end_week03
 
 label counseling_with_haeun_second_choice_2:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_second_choice.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "이준혁?"
     h "…아뇨, 그 이름은 아닌 것 같아요"
     h "준성. 이준성이요"
     j "(이준성. 그 이름을 하은씨 입에서 듣는 순간 뭔가 머릿속에서 흔들리는 게 있다)"
-    jump week03_row_114
+    jump counseling_with_haeun_end_week03
 
 label counseling_with_haeun_second_choice_3:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_second_choice.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     j "그 이상은 기억이 안 나요?"
     h "…이준성이요. 갑자기 떠올랐어요"
     j "(이준성. 그 이름이 낯설지 않다. 왜 내가 먼저 말하지 않았지)"
-    jump week03_row_114
+    jump counseling_with_haeun_end_week03
 
-label week03_row_114:
+label counseling_with_haeun_end_week03:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/week03/counseling_with_haeun_end_week03.mp3" fadein 1.0
     show haeun_cured_concerned as actor
     "이름이 확인된 후 재우는 잠시 말을 잃었다"
     j "(이준성. 해외 갔다고 들었는데. 근데 지금 하은씨 표정을 보면 그게 아니라는 걸 이미 알 것 같다)"
@@ -223,6 +251,7 @@ label week03_row_114:
     j "근데 지금 하은씨 얘기를 들으면서… 그게 아니었다는 걸 알겠어요"
     j "(그리고 그 말을 누가 했는지도, 왜 내가 그걸 그대로 믿었는지도 이제는 모르겠다. 아니, 알고 싶지 않아서 그냥 믿어버린 것 같기도 하다)"
     "한동안 침묵이 흘렀다"
+    stop music fadeout 1.0
     if week03_first_choice == 2:
         jump week03_true_ending
     jump week03_good_ending

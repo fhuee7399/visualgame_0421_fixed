@@ -1,5 +1,7 @@
 label week03_true_ending:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/ending/true_ending.mp3" fadein 1.0
     show haeun_cured_default as actor
     h "선생님, 한 가지 더 여쭤봐도 될까요?"
     j "네"
@@ -83,4 +85,5 @@ label week03_true_ending:
     scene bg_ending_true
     h "사랑해ㅡ"
     "True Ending" with hpunch
+    stop music fadeout 1.0
     return

@@ -203,10 +203,10 @@ label talk_with_haeun1:
     h "선생님은 사랑을 하신 적이 있나요?"
 
     "갑작스러운 질문에 재우는 당황한다."
-
+    
+    h "대답해 주세요."
     menu:
-        h "대답해 주세요."
-
+      
        "저희 어머니를 사랑합니다.":
         show haeun_question as actor
         j "저희 어머니를 사랑합니다."
@@ -218,7 +218,7 @@ label talk_with_haeun1:
         hide actor
         jump haeun_bad_ending
 
-        "저도 프라이버시가 있어요.":
+       "저도 프라이버시가 있어요.":
         show haeun_sad as actor
         j "저도 프라이버시가 있어요."
         hide actor
@@ -228,7 +228,7 @@ label talk_with_haeun1:
         hide actor
         jump haeun_bad_ending
 
-        "글쎄요... 중학교 때 있었던 거 같아요.":
+       "글쎄요... 중학교 때 있었던 거 같아요.":
         show haeun_sad as actor
         j "글쎄요... 중학교 때 있었던 거 같아요."
         hide actor
@@ -245,7 +245,7 @@ label talk_with_haeun1:
         show haeun_happy as actor
         h "네... 어느 정도 알 것 같아요." 
         hide actor
-        jump label talk_with_haeun2
+        jump talk_with_haeun2
 
 label talk_with_haeun2:
     scene bg_counsel_day
@@ -277,10 +277,8 @@ label talk_with_haeun2:
     "하은이 재우를 향해 손을 뻗는다."
 
     h "손을 잡아주실 수 있나요?"
-
+    j "(이래도 되는 걸까?)"
     menu:
-        j "(이래도 되는 걸까?)"
-       
        "고소가 무서워 서진이를 불러 대신 안심시킨다.":
         show haeun_sad as actor
         j "(잠깐만... 고소당하는 거 아니야?)"
@@ -289,23 +287,23 @@ label talk_with_haeun2:
         hide actor
         jump haeun_bad_ending
 
-        "하은의 손을 잡는다.":
-        show haeun_sad as actor
-        j "(이래도 되는 걸까?)"
-        "재우가 하은의 손을 잡는다."
-        "하은의 신음 소리가 줄어든다."
-        h "감사합니다..."
-        hide actor
-        jump talk_with_haeun3
+       "하은의 손을 잡는다.":
+         show haeun_sad as actor
+         j "(이래도 되는 걸까?)"
+         "재우가 하은의 손을 잡는다."
+         "하은의 신음 소리가 줄어든다."
+         h "감사합니다..."
+         hide actor
+         jump talk_with_haeun3
 
-        "하은을 멈춘다.":
-        show haeun_sad as actor
-        j "(아무래도 신체 접촉은 좀 부담스럽지.)"
-        j "하은님, 괜찮아요. 무리하지 않아도 돼요."
-        h "그렇지만... 앞으로 조금 남은 것 같은데..."
-        j "괜찮다니까요?"
-        hide actor
-        jump haeun_bad_ending
+       "하은을 멈춘다.":
+         show haeun_sad as actor
+         j "(아무래도 신체 접촉은 좀 부담스럽지.)"
+         j "하은님, 괜찮아요. 무리하지 않아도 돼요."
+         h "그렇지만... 앞으로 조금 남은 것 같은데..."
+         j "괜찮다니까요?"
+         hide actor
+         jump haeun_bad_ending
     
 label talk_with_haeun3:
     scene bg_counsel_day
@@ -327,9 +325,9 @@ label talk_with_haeun3:
 
     "재우는 엘리베이터 문이 닫힐 때까지 손을 흔들었다."
     hide actor
-    jump jaewoo_return_home
+    jump jaewoo_return_home2
 
-label jaewoo_return_home:
+label jaewoo_return_home2:
     scene bg_street_night
     "재우도 마무리를 한 뒤 집으로 향하자 밤이 되었다."
 

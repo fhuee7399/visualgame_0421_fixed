@@ -259,8 +259,8 @@ label hospital_pro:
     show seojin_smile
     j "걱정도 많으시다. 제가 그럴 사람으로 보여요?"
     show seojin_smile
-    hide seojin_smile
     d "네." 
+    hide seojin_smile
 
     "재우를 놀리며 서진이 상담실을 빠져나간다."
 

@@ -227,25 +227,39 @@ menu:
      jump haeun_bad_ending
 
     "저도 프라이버시가 있어요.":
+    show haeun_sad as actor
      j "저도 프라이버시가 있어요."
+     hide actor
+     show haeun_mad as actor
      h "...저랑 상담을 하고 있던 게 맞나요?"
      j "죄송합니다."
+     hide actor
      jump haeun_bad_ending
 
     "글쎄요... 중학교 때 있었던 거 같아요.":
+    show haeun_sad as actor
      j "글쎄요... 중학교 때 있었던 거 같아요."
+     hide actor
+     show haeun_emotionless as actor
      h "더 이야기해 주실 수 있나요?"
      j "네, 저도 정확하게는 기억나지 않지만..."
      j "무언가 그 시절을 생각하면 '사랑이란 게 이런 게 아닐까?'라는 생각을 해요."
+     hide actor
+     show haeun_question as actor
      h "선생님은 그게 사랑인지 어떻게 아시는 건가요?"
      j "잘은 설명하지 못하겠지만..."
      j "볼수록 더 보고 싶고, 생각할수록 더 생각나는 그런 게 아닐까요?"
+     hide actor 
+     show haeun_happy as actor
      h "네... 어느 정도 알 것 같아요." 
+     hide actor
      jump label talk_with_haeun2
 
 label talk_with_haeun2
+show haeun_happy as actor
 j "이어서 상담을 진행해 볼까요?"
-
+hide actor
+show haeun_emotionless as actor
 h "네, 선생님. 어쩌면 이 답답함이 우울함의 원인일 수도 있을 것 같아요."
 
 j "비슷한 감정을 느끼는 대상이 있으신가요?"
@@ -253,7 +267,8 @@ j "비슷한 감정을 느끼는 대상이 있으신가요?"
 h "음... 비슷하진 않지만 트럭을 볼 때마다 조금씩 답답한 게 있는 것 같아요."
 
 j "트럭이라... 사고가 있으셨던 건가요?"
-
+hide actor
+show haeun_sad as actor
 h "어... (머리를 쥔다.)"
 
 "하은이 괴로운 신음 소리를 낸다."
@@ -272,29 +287,38 @@ h "손을 잡아주실 수 있나요?"
 
 menu:
     j "(이래도 되는 걸까?)"
+    hide actor
     "고소가 무서워 서진이를 불러 대신 안심시킨다.":
+    show haeun_sad as actor
     j "(잠깐만... 고소당하는 거 아니야?)"
     j "안 됩니다."
     h "...그러시겠죠."
+    hide actor
     jump haeun_bad_ending
 
     "하은의 손을 잡는다.":
+    show haeun_sad as actor
     j "(이래도 되는 걸까?)"
     "재우가 하은의 손을 잡는다."
     "하은의 신음 소리가 줄어든다."
     h "감사합니다..."
+    hide actor
     jump talk_with_haeun3
 
     "하은을 멈춘다.":
+    show haeun_sad as actor
     j "(아무래도 신체 접촉은 좀 부담스럽지.)"
     j "하은님, 괜찮아요. 무리하지 않아도 돼요."
     h "그렇지만... 앞으로 조금 남은 것 같은데..."
     j "괜찮다니까요?"
+    hide actor
     jump haeun_bad_ending
     
 label talk_with_haeun3:
+show haeun_emotionless as actor
 h "선생님, 이제 괜찮아요..."
-
+hide actor
+show haeun_happy as actor
 h "다시 한번 감사합니다."
 
 "마침 상담을 마칠 시간이 되었다."
@@ -308,6 +332,7 @@ h "선생님도요."
 h "(손을 흔들며) 다음에 뵐게요, 선생님."
 
 "재우는 엘리베이터 문이 닫힐 때까지 손을 흔들었다."
+hide actor
 jump jaewoo_return_home
 
 label jaewoo_return_home:
@@ -316,17 +341,18 @@ label jaewoo_return_home:
 j "오늘도 수고했다, 나 자신."
 
 "재우는 집으로 돌아와 잘 준비를 마치고 잠자리에 든다."
-
+show haeun_happy as actor
 j "하은씨 보기 좋아져서 다행이다."
-
+hide actor
 "재우는 하은에 대한 생각을 하며 잠에 들었다."
 jump past_event3
 
 label past_event3:
 show dim_past
 "울면서 달리고 있는 여자아이의 실루엣이 보인다."
-
+show junsung_mad as actor
 p_hidden "멈춰! 이하은!"
+hide actor
 
 "남자아이의 소리에 소녀(하은)가 멈춰 선다."
 

@@ -147,7 +147,7 @@ label talk_with_haeun1:
 
     j "하은님은 보통 방에서 어떤 걸 하시나요?"
     hide actor
-    show haeun_emotionless
+    show haeun_emotionless as actor
     h "...음, 저는요... 책을 읽는 것 같아요."
 
     j "어떤 책을 좋아하시나요?"

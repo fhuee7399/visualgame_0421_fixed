@@ -330,7 +330,10 @@ label date_past_flashback_4:
     "사진을 보고 있자 점점 땅이 가까워 진다."
     "부모님이 나의 이름을 부르는 소리가 들리지만 몸이 말을 듣지 않는다."
     hide dim_past
-    scene bg_hospital_bed
+
+    scene black with Fade(1.0, 2.0, 0.0)
+    
+    scene bg_hospital_bed with Fade(0.0, 0.0, 1.0)
     show dim_past
     "눈을 떠보니 나는 병원 1인실에 있었다."
     "친구들과의 기억은 사라진 상태로."

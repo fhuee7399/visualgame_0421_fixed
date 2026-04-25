@@ -503,17 +503,15 @@ label pastevent1:
     hide haeun_sil
     $ dialogue_shake_on = True
     h_hidden "쫓아오지 마!!! \%\$\#\$"
-    $ dialogue_shake_on = False
     show junsung_sil
     hide junsung_sil
     p_hidden "잠깐만! \%\$\#\$ 내 말 좀 들어봐!"
     show haeun_sil
     hide haeun_sil
-    $ dialogue_shake_on = True
     h_hidden "싫어!"
-    $ dialogue_shake_on = False
     show junsung_sil
     hide junsung_sil
     p_hidden "야! 기다려봐! 잠깐만!"
+    $ dialogue_shake_on = False
     hide dim_past
     jump week01_start

@@ -379,13 +379,17 @@ label past_flashback_2:
     p_hidden "그런게 아니야. 난 그저..."
     show haeun_sil as actor
     h_hidden "어떻게 그렇게 중요한 걸 소중한 친구에게 말하지 않을 수가 있어?"
+    $ dialogue_shake_on = True
     h_hidden "내가 뭘 오해 하고 있는 건데!"
+    $ dialogue_shake_on = False
     h_hidden "넌 친구도 아니야."
     hide actor
-    "남자아이가 여자아이를 붙잡는다."
+    "남자아이가 여자아이를 붙잡는다." with hpunch
     show haeun_sil as actor
     "여자아이가 남자아이를 뿌리치고 달려나간다."
+    $ dialogue_shake_on = True
     h_hidden "붙잡지마! 그냥 내 앞에서 사라져!"
+    $ dialogue_shake_on = False
     hide actor
     "남자아이가 여자아이를 뒤따라 달린다."
     hide dim_past

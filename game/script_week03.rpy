@@ -64,7 +64,9 @@ label talk_with_seojin_week03:
     d "하은 씨의 치료 과정 중에 생긴 일시적인 감정은 아닐지."
     j "그래, 생각해 볼께."
     d "김재우 이 녀석 부정하질 않네, 하은 씨랑 데이트 잘 하시고요. 원장님~."
+    $ dialogue_shake_on = True
     j "야!!"
+    $ dialogue_shake_on = False
     d "농담이고~ 상담 잘 해요. 전 먼저 가볼께요. 원장님"
     hide actor
     "서진은 상담실로 들어갔다."

@@ -380,7 +380,7 @@ label hospital_pro:
     j "(너무 공격적으로 물어본 걸까?)"
     show haeun_sad
     menu:
-        h "왜 그렇게 날 도와주려는 거야?"
+        h "왜 그렇게 날 도와주려는 거에요?"
         "모르겠어요. 하지만 하은씨를 볼 때 마다 도와주고 싶다는 생각이 들어요.":
                 hide haeun_sad
                 show haeun_question

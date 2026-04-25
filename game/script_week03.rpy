@@ -118,8 +118,8 @@ label counseling_with_haeun_week03:
     h "……트럭이요."
     h "트럭이 갑자기 달려왔고, 저는 피하지 못했어요"
     h "근데 누군가가 저를 밀어냈어요. 그리고 그 사람이…"
+    stop music fadeout 1.0
     menu:
-        stop music fadeout 1.0
         "하은의 말이 멈췄다. 재우는 서두르지 않고 기다렸다"
         "그 사람이 대신 치인 건가요?":
             $ week03_first_choice += 1
@@ -175,9 +175,9 @@ label counseling_with_haeun_02_week03:
     h "말이 거칠고 행동이 맘에 안 들었는데… 나쁜 사람은 아니었거든요"
     j "이름이 기억나요?"
     h "…준. 준이 들어갔던 것 같아요"
+    stop music fadeout 1.0
     menu:
         j "(해외 갔다고 들었던 애. 언제 들었더라. 기억이 잘 안 난다)"
-        stop music fadeout 1.0
         "이준성?":
             $ week03_first_choice += 1
             jump counseling_with_haeun_second_choice_1

@@ -66,6 +66,8 @@ label transition_week3:
 label start:
 # 과거회상_프롤로그
     scene bg_park_day
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/start.mp3" fadein 1.0
     "한 남자 아이가 도망가는 것이 보인다. 난 그 아이를 쫓고 있는 듯 하다."   
     show junsung_sil
     p_hidden "늦게 온 사람이 음료수 사기!"
@@ -78,6 +80,8 @@ label start:
 
 # 재우파트_프롤로그
     scene bg_house_day
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/jaewoo_part.mp3" fadein 1.0
     "햇빛이 들어오는 방에서 오전 7시에 맞춘 알람이 울리며 재우가 깨어난다."
     j "오늘도 출근이네…"
     "재우는 병원에 갈 준비를 하면서 오늘 업무에 대해 정리한다."
@@ -87,6 +91,8 @@ label start:
 
 # 출근길_프롤로그
     scene bg_street_day
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/commute.mp3" fadein 1.0
     "거리로 나선 재우는 평소와 같이 지하철을 타려간다."
     j "아 맞다 오늘 공사하는 날이였던가?"
     "재우는 집앞의 병원으로 향하는 버스 정류장으로 향한다."
@@ -104,6 +110,8 @@ menu:
 
 label bus_pro:
     scene bg_bus
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/bus_pro.mp3" fadein 1.0
     j "저기 버스가 오네. 딱 좋은 타이밍인걸?"
     "출근 시간의 버스 답게 많은 사람들이 타고 있다."
     "재우는 수많은 사람들에 끼이게 되었다."
@@ -119,6 +127,8 @@ jump hospital_pro
 
 label taxi_pro:
     scene bg_taxi
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/taxi_pro.mp3" fadein 1.0
     j "오 택시는 오랜만인걸? 여기요!"
     "재우는 택시를 향해 손을 흔든다."
     "택시가 재우의 앞에 멈추고 재우는 택시에 탑승한다."
@@ -134,6 +144,8 @@ jump hospital_pro
 
 label walk_pro:
     scene bg_street_day
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/walk_pro.mp3" fadein 1.0
     j "오랜만에 걸어가볼까?"
     "재우는 병원을 향해 걷기 시작했다."
     j "가끔씩을 걸어가볼까? 생각보다 좋다."
@@ -152,6 +164,8 @@ jump hospital_pro
 
 label hospital_pro:
     scene bg_hospital
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/hospital_pro.mp3" fadein 1.0
     show seojin_emotionless
     "3층의 병원에 들어가자 흰 가운에 네이비 색의 원피스를 입은 여성이 보인다."
     show seojin_emotionless
@@ -290,6 +304,8 @@ label hospital_pro:
 
     j "이하은씨 들어오세요."
     #하은_첫_상담
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/haeun_counseling_first.mp3" fadein 1.0
     show haeun_emotionless
     "하은이 상담실에 들어오자 백발과 다르게 붉은 눈이 눈에 들어온다."
     show haeun_emotionless
@@ -368,6 +384,8 @@ label hospital_pro:
         "모르겠어요. 하지만 하은씨를 볼 때 마다 도와주고 싶다는 생각이 들어요.":
                 hide haeun_sad
                 show haeun_question
+                stop music fadeout 1.0
+                play music "audio/bgm/pro/haeun_counseling_answer_1.mp3" fadein 1.0
                 j "저도 왜 그랬는지는 모르겠지만"
                 show haeun_question
                 j "하은씨를 볼 때마다 저도 뭔가 모를 감정이 떠올라요."
@@ -395,6 +413,8 @@ label hospital_pro:
         "의사니까요. 저는 하은씨를 도와드리고 싶어요.":
                 hide haeun_sad
                 show haeun_emotionless
+                stop music fadeout 1.0
+                play music "audio/bgm/pro/haeun_counseling_answer_2.mp3" fadein 1.0
                 h "감사합니다. 그냥 우울했어요."
                 show haeun_emotionless
                 j "그 이유를 알고 계신가요?"
@@ -408,6 +428,8 @@ label hospital_pro:
         "죄송합니다. 그래도 저는 알아야 할 의무가 있어요.":
                 show haeun_sad
                 hide haeun_sad 
+                stop music fadeout 1.0
+                play music "audio/bgm/pro/haeun_counseling_answer_3.mp3" fadein 1.0
                 h "의무니까 알고 싶으신 건가요?"
                 show haeun_emotionless
                 j "너무 말이 강했던 거 같네요. 하지만 저도 하은씨를 돕고 싶어요."
@@ -422,6 +444,8 @@ label hospital_pro:
 
 label firstmeeting_pro:
     scene bg_counsel_day
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/haeun_counseling_end.mp3" fadein 1.0
     show haeun_emotionless
     j "시간이 된 거 같네요."
     show haeun_emotionless
@@ -448,6 +472,8 @@ label firstmeeting_pro:
 
     "재우는 마무리를 한 뒤 귀가 준비를 한다."
     scene bg_street_night
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/jaewoo_goinghome.mp3" fadein 1.0
     "재우는 업무를 마치고 집으로 향한다."
 
     j "다행이다. 공사가 끝났네."
@@ -468,6 +494,8 @@ jump pastevent1
 label pastevent1:
     scene bg_class_day
     show dim_past
+    stop music fadeout 1.0
+    play music "audio/bgm/pro/past_flashback_1.mp3" fadein 1.0
     "지지직..."
 
     "교실의 창문 밖으로 두 명의 학생이 뛰어가는 것이 보인다."
